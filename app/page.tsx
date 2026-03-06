@@ -6,7 +6,6 @@ function page() {
   return (
     <div>
       <Home/>
-      hello hii
       <About/>
     </div>
   )
