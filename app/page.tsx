@@ -5,7 +5,7 @@ function page() {
   return (
     <div>
       <Home/>
-      hello
+      hello hii
     </div>
   )
 }
