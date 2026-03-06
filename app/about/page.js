@@ -1,12 +1,9 @@
 import React from 'react'
-import Home from "./home/Home"
-import About from "./about/About"
+import About from './About'
 
 function page() {
   return (
     <div>
-      <Home/>
-      hello hii
       <About/>
     </div>
   )
