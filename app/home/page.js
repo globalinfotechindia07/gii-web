@@ -1,11 +1,10 @@
 import React from 'react'
-import Home from "./home/Home"
+import Home from './Home'
 
 function page() {
   return (
     <div>
       <Home/>
-      hello
     </div>
   )
 }
