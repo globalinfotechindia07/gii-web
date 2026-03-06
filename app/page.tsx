@@ -1,12 +1,22 @@
 import React from 'react'
-import Home from "./home/Home"
-import About from "./about/About"
+import HeroSection from "./hero-section/HeroSection"
+import ServicesSection from "./services-section/ServicesSection"
+import ProductsSection from "./products-section/ProductsSection"
+import ClientsSection from "./clients-section/ClientsSection"
+import PartnersSection from "./partners-section/PartnersSection"
+import ContactSection from "./contact-section/ContactSection"
+
+
 
 function page() {
   return (
     <div>
-      <Home/>
-      <About/>
+   <HeroSection />
+      <ServicesSection />
+      <ProductsSection />
+      <ClientsSection />
+      <PartnersSection />
+      <ContactSection />
     </div>
   )
 }
