@@ -16,7 +16,7 @@ import {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#home');
+  const [activeLink, setActiveLink] = useState('/');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +27,8 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home', icon: Home },
-    { href: '#services', label: 'Services', icon: Server },
+    { href: '/', label: 'Home', icon: Home },
+    { href: '/services', label: 'Services', icon: Server },
     { href: '#products', label: 'Products', icon: Package },
     { href: '#clients', label: 'Clients', icon: Users },
     { href: '#contact', label: 'Contact', icon: Phone },
@@ -59,7 +59,7 @@ const Header = () => {
             <div className="flex flex-col">
               <h1 className="text-xl sm:text-2xl font-black tracking-tighter leading-none">
                 <span className="text-white">GLOBAL</span>
-                <span className="text-blue-500">INFOTECH</span>
+                <span className="text-blue-500">INFOTECH INDIA</span>
               </h1>
               <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">
                 Digital Excellence
