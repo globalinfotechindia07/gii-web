@@ -34,7 +34,7 @@ function Connect() {
 
         {/* Massive Heading */}
         <h2
-          className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[0.9] text-white"
+          className="text-5xl md:text-6xl lg:text-7xl font-black mb-10 tracking-tighter leading-[0.9] text-white"
           data-aos="fade-up"
           data-aos-delay="100"
         >
