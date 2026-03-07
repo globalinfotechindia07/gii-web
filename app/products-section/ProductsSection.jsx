@@ -1,62 +1,118 @@
-// components/ProductsSection.jsx
-import React from 'react';
-import { Building2, Wallet, Users, Shield, Clock, Headphones } from 'lucide-react';
+"use client";
+
+import React, { useEffect } from "react";
+import { ExternalLink, Layers, ShieldCheck, Zap } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const products = [
+  {
+    title: "Dronacharya ERP",
+    subtitle: "Innovating School Management",
+    description: "A comprehensive School ERP system designed to digitize and streamline every aspect of school management — from admissions and attendance to fees and results.",
+    tags: ["School Management", "Cloud-Based", "Mobile Ready"],
+    icon: <Layers className="text-blue-400" size={24} />,
+    color: "from-blue-600 to-indigo-600",
+    link: "#"
+  },
+  {
+    title: "CCRMS",
+    subtitle: "Co-operative Credit Risk Management",
+    description: "An advanced system that helps financial institutions assess, monitor and manage credit risk efficiently with real-time data and automated analytics.",
+    tags: ["Credit Risk", "Enterprise", "Analytics"],
+    icon: <ShieldCheck className="text-emerald-400" size={24} />,
+    color: "from-emerald-600 to-teal-600",
+    link: "#"
+  }
+];
 
 const ProductsSection = () => {
-  const products = [
-    {
-      icon: <Building2 size={40} className="text-blue-600" />,
-      title: "Dronacharya ERP",
-      subtitle: "INNOVATING SCHOOL MANAGEMENT",
-      description: "A comprehensive School ERP system designed to digitize and streamline every aspect of school management — from admissions and attendance to fees, results and communication."
-    },
-    {
-      icon: <Wallet size={40} className="text-blue-600" />,
-      title: "Co-operative Credit Risk Management System",
-      description: "A comprehensive Co-operative Credit Risk Management System that helps financial institutions assess, monitor and manage credit risk effectively with real-time data and analytics."
-    },
-    {
-      icon: <Users size={40} className="text-blue-600" />,
-      title: "Smart Workforce",
-      description: "Wearable IoT devices for workforce monitoring."
-    },
-    {
-      icon: <Shield size={40} className="text-blue-600" />,
-      title: "Secure File Sharing",
-      description: "Secure file sharing platform for seamless collaboration."
-    },
-    {
-      icon: <Clock size={40} className="text-blue-600" />,
-      title: "On-Time Delivery",
-      description: "Agile methodology & strict project timelines ensure your product is delivered on time, every time."
-    },
-    {
-      icon: <Headphones size={40} className="text-blue-600" />,
-      title: "24/7 Support",
-      description: "Round-the-clock technical support & AMC packages to keep your systems running without interruption."
-    }
-  ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-out-back"
+    });
+  }, []);
 
   return (
-    <section id="products" className="py-16 px-4 bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold mb-2">OUR PRODUCTS</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Products We Built</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Innovative software products developed by GI — purpose-built for real-world needs.
+    <section id="products" className="relative py-32 px-6 bg-[#020617] text-white overflow-hidden">
+      
+      {/* Background Decorative Light */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[120px] -z-10" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Heading */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8" data-aos="fade-up">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <Zap size={20} className="text-blue-500 fill-blue-500" />
+              <span className="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase">Proprietary Tech</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              Our Flagship <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Products</span>
+            </h2>
+          </div>
+          <p className="text-gray-400 text-lg max-w-sm md:text-right border-l-2 md:border-l-0 md:border-r-2 border-blue-500/30 px-6">
+            Engineered to automate complexity and empower institutional growth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cards Grid */}
+        <div className="grid lg:grid-cols-2 gap-12">
           {products.map((product, index) => (
-            <div key={index} className="border border-gray-200 p-6 rounded-xl hover:shadow-lg transition">
-              <div className="mb-4">{product.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-              {product.subtitle && (
-                <p className="text-blue-600 text-sm font-semibold mb-2">{product.subtitle}</p>
-              )}
-              <p className="text-gray-600">{product.description}</p>
+            <div
+              key={index}
+              className="group relative"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            >
+              {/* Glowing Background on Hover */}
+              <div className={`absolute -inset-2 bg-gradient-to-r ${product.color} rounded-[2rem] opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`} />
+              
+              {/* Main Card */}
+              <div className="relative h-full flex flex-col bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-12 transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05]">
+                
+                {/* Product Header */}
+                <div className="flex justify-between items-start mb-8">
+                  <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                    {product.icon}
+                  </div>
+                  <a href={product.link} className="p-3 rounded-full bg-white/5 hover:bg-blue-600 transition-colors">
+                    <ExternalLink size={20} />
+                  </a>
+                </div>
+
+                <div className="mb-auto">
+                  <h3 className="text-3xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className={`text-sm font-semibold tracking-wide uppercase mb-6 bg-clip-text text-transparent bg-gradient-to-r ${product.color}`}>
+                    {product.subtitle}
+                  </p>
+                  <p className="text-gray-400 leading-relaxed mb-8 text-lg">
+                    {product.description}
+                  </p>
+                </div>
+
+                {/* Tag Cloud */}
+                <div className="flex flex-wrap gap-2 pt-6 border-t border-white/5">
+                  {product.tags.map((tag, tIdx) => (
+                    <span 
+                      key={tIdx} 
+                      className="px-4 py-1.5 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-gray-300 group-hover:border-blue-500/30 group-hover:text-blue-300 transition-all duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Glassy "Visit" Button */}
+                <button className="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-white/5 to-white/[0.02] border border-white/10 font-bold tracking-wider hover:from-blue-600 hover:to-indigo-600 transition-all duration-500 active:scale-95">
+                  VISIT PRODUCT SITE
+                </button>
+              </div>
             </div>
           ))}
         </div>
