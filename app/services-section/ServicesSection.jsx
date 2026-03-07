@@ -1,61 +1,172 @@
-// components/ServicesSection.jsx
-import React from 'react';
-import { Globe, Smartphone, Cloud, Shield, Brain, TrendingUp } from 'lucide-react';
+"use client";
 
-const ServicesSection = () => {
-  const services = [
-    {
-      icon: <Globe size={40} className="text-blue-600" />,
-      title: "Web Development",
-      description: "Custom responsive websites & web apps built with the latest technologies for every screen size."
-    },
-    {
-      icon: <Smartphone size={40} className="text-blue-600" />,
-      title: "App Development",
-      description: "Native & cross-platform mobile apps for iOS and Android using Flutter & React Native."
-    },
-    {
-      icon: <Cloud size={40} className="text-blue-600" />,
-      title: "SaaS & ERP Solutions",
-      description: "Scalable cloud-based SaaS platforms and ERP systems for schools, businesses & enterprises."
-    },
-    {
-      icon: <Shield size={40} className="text-blue-600" />,
-      title: "Cybersecurity & Networking",
-      description: "Penetration testing, security audits, firewall setup & enterprise-grade network architecture."
-    },
-    {
-      icon: <Brain size={40} className="text-blue-600" />,
-      title: "IT Consulting & Automation",
-      description: "Strategic IT consulting & workflow automation to align technology with your business goals."
-    },
-    {
-      icon: <TrendingUp size={40} className="text-blue-600" />,
-      title: "Digital Marketing",
-      description: "SEO, Google Ads & social media campaigns that drive real traffic and business growth."
-    }
-  ];
+import React, { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import AOS from "aos";
+
+import "aos/dist/aos.css";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import {
+  Globe,
+  Smartphone,
+  Cloud,
+  Shield,
+  Brain,
+  TrendingUp,
+  ArrowUpRight,
+} from "lucide-react";
+
+const services = [
+  {
+    icon: Globe,
+    title: "Web Development",
+    description: "Custom responsive websites & modern web apps built with the latest technologies.",
+    gradient: "from-blue-500/20 to-cyan-500/0",
+  },
+  {
+    icon: Smartphone,
+    title: "App Development",
+    description: "High performance Android & iOS applications built using Flutter and React Native.",
+    gradient: "from-purple-500/20 to-pink-500/0",
+  },
+  {
+    icon: Cloud,
+    title: "SaaS & ERP Solutions",
+    description: "Scalable SaaS platforms and ERP systems designed for schools and enterprises.",
+    gradient: "from-emerald-500/20 to-teal-500/0",
+  },
+  {
+    icon: Shield,
+    title: "Cybersecurity",
+    description: "Security audits, penetration testing and enterprise level network protection.",
+    gradient: "from-red-500/20 to-orange-500/0",
+  },
+  {
+    icon: Brain,
+    title: "IT Consulting",
+    description: "Strategic technology consulting and automation solutions for businesses.",
+    gradient: "from-indigo-500/20 to-blue-500/0",
+  },
+  {
+    icon: TrendingUp,
+    title: "Digital Marketing",
+    description: "SEO, Google Ads and social media campaigns to grow your online presence.",
+    gradient: "from-yellow-500/20 to-amber-500/0",
+  },
+];
+
+const ServiceCard = ({ service, delay }) => {
+  const Icon = service.icon;
 
   return (
-    <section id="services" className="py-16 px-4 bg-gray-50">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold mb-2">WHAT WE DO</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Services We Provide</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Comprehensive IT solutions tailored for every business — from startups to large enterprises.
+    <div
+      data-aos="fade-up"
+      data-aos-delay={delay}
+      className="group relative h-full p-px rounded-3xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
+    >
+      {/* Animated Border Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/5 group-hover:from-blue-500/50 transition-colors duration-500" />
+      
+      {/* Card Body */}
+      <div className="relative h-full bg-[#0f172a]/80 backdrop-blur-2xl p-8 rounded-[calc(1.5rem-1px)] flex flex-col">
+        
+        {/* Glow Effect behind Icon */}
+        <div className={`absolute top-0 left-0 w-32 h-32 bg-gradient-to-br ${service.gradient} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+        <div className="relative z-10">
+          <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 mb-8 group-hover:bg-blue-600 group-hover:border-blue-400 transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+            <Icon size={30} className="text-blue-400 group-hover:text-white transition-colors" />
+          </div>
+
+          <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-300 transition-colors">
+            {service.title}
+          </h3>
+
+          <p className="text-gray-400 text-base leading-relaxed mb-6">
+            {service.description}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Action Link */}
+        <div className="mt-auto pt-4 relative z-10">
+          <button className="flex items-center gap-2 text-sm font-bold text-white/50 group-hover:text-blue-400 transition-all">
+            LEARN MORE <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ServicesSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-out",
+    });
+  }, []);
+
+  return (
+    <section id="services" className="relative bg-[#020617] text-white py-32 overflow-hidden">
+      
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#1e293b,transparent)] pointer-events-none" />
+      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        
+        {/* Heading Section */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+          <div className="max-w-2xl" data-aos="fade-right">
+            <h2 className="text-indigo-400 font-mono text-sm tracking-[0.3em] uppercase mb-4">
+              Our Expertise
+            </h2>
+            <h2 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+              Future-Ready <br /> Digital Solutions.
+            </h2>
+          </div>
+          <div className="max-w-sm" data-aos="fade-left">
+            <p className="text-gray-400 text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6">
+              We bridge the gap between complex ideas and seamless digital reality.
+            </p>
+          </div>
+        </div>
+
+        {/* MOBILE SLIDER */}
+        <div className="lg:hidden" data-aos="zoom-in">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={24}
+            slidesPerView={1.1}
+            centeredSlides={true}
+            pagination={{ clickable: true, dynamicBullets: true }}
+            autoplay={{ delay: 4000 }}
+            loop={true}
+            className="pb-16"
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <ServiceCard service={service} delay={0} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* DESKTOP GRID */}
+        <div className="hidden lg:grid grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
+            <ServiceCard
+              key={index}
+              service={service}
+              delay={index * 100}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );
