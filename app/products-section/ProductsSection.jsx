@@ -9,7 +9,7 @@ const products = [
   {
     title: "Dronacharya ERP",
     subtitle: "Innovating School Management",
-    description: "A comprehensive School ERP system designed to digitize and streamline every aspect of school management — from admissions and attendance to fees and results.",
+    description: "A comprehensive School ERP system designed to digitize and streamline every aspect of school management — from admissions and attendance to fees, results and communication.",
     tags: ["School Management", "Cloud-Based", "Mobile Ready"],
     icon: <Layers className="text-blue-400" size={24} />,
     color: "from-blue-600 to-indigo-600",

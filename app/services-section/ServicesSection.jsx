@@ -23,37 +23,37 @@ const services = [
   {
     icon: Globe,
     title: "Web Development",
-    description: "Custom responsive websites & modern web apps built with the latest technologies.",
+    description: "Custom responsive websites & web apps built with the latest technologies for every screen size.",
     gradient: "from-blue-500/20 to-cyan-500/0",
   },
   {
     icon: Smartphone,
     title: "App Development",
-    description: "High performance Android & iOS applications built using Flutter and React Native.",
+    description: "Native & cross-platform mobile apps for iOS and Android using Flutter & React Native.",
     gradient: "from-purple-500/20 to-pink-500/0",
   },
   {
     icon: Cloud,
     title: "SaaS & ERP Solutions",
-    description: "Scalable SaaS platforms and ERP systems designed for schools and enterprises.",
+    description: "Scalable cloud-based SaaS platforms and ERP systems for schools, businesses & enterprises.",
     gradient: "from-emerald-500/20 to-teal-500/0",
   },
   {
     icon: Shield,
     title: "Cybersecurity",
-    description: "Security audits, penetration testing and enterprise level network protection.",
+    description: "Penetration testing, security audits, firewall setup & enterprise-grade network architecture.",
     gradient: "from-red-500/20 to-orange-500/0",
   },
   {
     icon: Brain,
     title: "IT Consulting",
-    description: "Strategic technology consulting and automation solutions for businesses.",
+    description: "Strategic IT consulting & workflow automation to align technology with your business goals.",
     gradient: "from-indigo-500/20 to-blue-500/0",
   },
   {
     icon: TrendingUp,
     title: "Digital Marketing",
-    description: "SEO, Google Ads and social media campaigns to grow your online presence.",
+    description: "SEO, Google Ads & social media campaigns that drive real traffic and business growth.",
     gradient: "from-yellow-500/20 to-amber-500/0",
   },
 ];

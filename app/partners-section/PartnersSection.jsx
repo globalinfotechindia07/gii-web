@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 import { ShieldCheck, ArrowUpRight } from "lucide-react";
 
 const partners = [
-  { name: "IBM", color: "group-hover:text-blue-500", desc: "Cloud & AI Infrastructure" },
-  { name: "Microsoft", color: "group-hover:text-cyan-400", desc: "Enterprise Ecosystem" },
-  { name: "Oracle", color: "group-hover:text-red-500", desc: "Database Solutions" },
-  { name: "Salesforce", color: "group-hover:text-sky-500", desc: "CRM & Cloud Tech" }
+  { name: "GIBC UK", color: "group-hover:text-blue-500", desc: "Global India Business Corridor" },
+  { name: "Kanu Ventures", color: "group-hover:text-cyan-400", desc: "Powering the AI Economy" },
+  { name: "Felix-ITs", color: "group-hover:text-red-500", desc: "Felix IT Systems" },
+  { name: "Sarthi NGO", color: "group-hover:text-sky-500", desc: "Sarthi Bahuuddeshiya Sanstha, Wardha" }
 ];
 
 const PartnersSection = () => {
@@ -66,7 +66,7 @@ const PartnersSection = () => {
               {/* Card Container */}
               <div className="
                 relative overflow-hidden
-                h-64 flex flex-col items-center justify-center
+                h-40 flex flex-col items-center justify-center
                 rounded-[2.5rem] border border-white/10
                 bg-white/[0.03] backdrop-blur-3xl
                 transition-all duration-700
@@ -81,7 +81,7 @@ const PartnersSection = () => {
                 </div>
 
                 {/* Partner Name */}
-                <span className={`text-4xl md:text-5xl font-black tracking-tighter text-gray-400 transition-all duration-500 ${partner.color} group-hover:scale-110 mb-2`}>
+                <span className={`text-3xl md:text-2x2 font-black tracking-tighter text-gray-400 transition-all duration-500 ${partner.color} group-hover:scale-110 mb-2`}>
                   {partner.name}
                 </span>
                 
