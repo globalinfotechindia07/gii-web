@@ -42,7 +42,7 @@ const PartnersSection = () => {
              <span className="h-[2px] w-12 bg-blue-500"></span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-10 tracking-tighter leading-tight">
+          <h2 className="text-5xl md:text-5xl lg:text-6xl font-black mb-10 tracking-tighter leading-tight">
             Trusted by the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
               Industry Giants
@@ -50,11 +50,10 @@ const PartnersSection = () => {
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed font-medium">
-            We don't just use technology; we partner with the architects of the digital age to build your future.
+            We dont just use technology; we partner with the architects of the digital age to build your future.
           </p>
         </div>
 
-        {/* Partner Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {partners.map((partner, index) => (
             <div

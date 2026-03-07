@@ -37,13 +37,13 @@ const HeroSection = () => {
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[140px] animate-pulse"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
+      <div className="relative z-10 max-w-7xl mx-auto text-center mt-4">
         
         {/* Glass Pill */}
         <div className="hero-pill inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
           <Sparkles size={16} className="text-blue-400" />
           <p className="text-xs sm:text-sm text-blue-100 tracking-[0.2em] font-bold uppercase">
-            Leading India's Digital Evolution
+            Leading India Digital Evolution
           </p>
         </div>
 
