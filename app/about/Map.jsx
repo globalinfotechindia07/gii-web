@@ -2,7 +2,7 @@ export default function FindUs() {
   return (
     <section className="py-24 px-6 bg-[#050816] text-center">
 
-      <div className="max-w-7xl mx-auto">
+      <div className="w-[100%] mx-auto">
 
         {/* badge */}
         <div className="border border-blue-500 text-blue-400 text-xs tracking-widest px-5 py-2 rounded-full inline-block mb-6">
@@ -31,7 +31,7 @@ export default function FindUs() {
             width="100%"
             height="450"
             loading="lazy"
-            className="w-full h-[450px]"
+            className="w-[100%] h-[450px]"
           ></iframe>
 
         </div>
