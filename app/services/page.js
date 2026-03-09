@@ -6,7 +6,7 @@ import Connect from '../connect/Connect'
 function page() {
   return (
     <div>
-      <Services/>
+      {/* <Services/> */}
       <OurServices/>
       <Connect/>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Lightbulb, Users, HeartHandshake, ArrowRight } from "lucide-react";
+import { Lightbulb, Users, ArrowRight, LockKeyhole, HousePlus, ShieldHalf, CalendarCheck, ClockCheck} from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,17 +13,39 @@ const chooseUsData = [
     color: "from-blue-500 to-cyan-400",
   },
   {
-    icon: Users,
-    title: "Experienced Team",
-    description: "Our team of experts brings years of experience and deep understanding of modern business needs.",
+    icon: LockKeyhole,
+    title: "Security First",
+    description: "Every solution adheres to industry-leading security standards, keeping your data fully protected.",
     color: "from-purple-500 to-pink-500",
   },
   {
-    icon: HeartHandshake,
-    title: "Client-Centric Approach",
-    description: "We prioritize your needs and work closely with you to deliver solutions that exceed expectations.",
+    icon: HousePlus,
+    title: "Scalable Architecture",
+    description: "Systems built to grow with your business — from startups to large-scale enterprises.",
     color: "from-emerald-500 to-teal-400",
   },
+
+    {
+    icon: Users,
+    title: "Expert Team",
+    description: "A team of certified professionals with deep expertise across web, mobile, AI, cloud & cybersecurity.",
+    color: "from-emerald-500 to-teal-400",
+  },
+    {
+    icon: CalendarCheck,
+    title: "On-Time Delivery",
+    description: "Agile methodology & strict project timelines ensure your product is delivered on time, every time.",
+    color: "from-emerald-500 to-teal-400",
+  },
+
+  {
+    icon: ClockCheck,
+    title: "24/7 Support",
+    description: "Round-the-clock technical support & AMC packages to keep your systems running without interruption.",
+    color: "from-emerald-500 to-teal-400",
+  },
+
+
 ];
 
 function WhyChooseUs() {
@@ -97,6 +119,7 @@ function WhyChooseUs() {
                   </p>
 
                   <div className="mt-auto pt-8">
+                    
                     <button className="flex items-center gap-2 text-sm font-semibold text-blue-400 group/btn">
                       Explore Tech Stack
                       <div className="h-px w-0 group-hover/btn:w-8 bg-blue-400 transition-all duration-300" />

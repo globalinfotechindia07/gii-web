@@ -6,10 +6,10 @@ import "aos/dist/aos.css";
 import { ShieldCheck, ArrowUpRight } from "lucide-react";
 
 const partners = [
-  { name: "IBM", color: "group-hover:text-blue-500", desc: "Cloud & AI Infrastructure" },
-  { name: "Microsoft", color: "group-hover:text-cyan-400", desc: "Enterprise Ecosystem" },
-  { name: "Oracle", color: "group-hover:text-red-500", desc: "Database Solutions" },
-  { name: "Salesforce", color: "group-hover:text-sky-500", desc: "CRM & Cloud Tech" }
+  { name: "GIBC UK", color: "group-hover:text-blue-500", desc: "Global India Business Corridor" },
+  { name: "Kanu Ventures", color: "group-hover:text-cyan-400", desc: "Powering the AI Economy" },
+  { name: "Felix-ITs", color: "group-hover:text-red-500", desc: "Felix IT Systems" },
+  { name: "Sarthi NGO", color: "group-hover:text-sky-500", desc: "Sarthi Bahuuddeshiya Sanstha, Wardha" }
 ];
 
 const PartnersSection = () => {
@@ -22,7 +22,7 @@ const PartnersSection = () => {
   }, []);
 
   return (
-    <section className="relative py-40 bg-[#020617] text-white overflow-hidden">
+    <section className="relative py-4 bg-[#020617] text-white overflow-hidden">
       
       {/* Background Dots Grid */}
       <div className="absolute inset-0 z-0 opacity-20" 
@@ -30,7 +30,7 @@ const PartnersSection = () => {
            backgroundSize: '40px 40px' }}>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className=" mx-auto px-2 relative z-10">
 
         {/* Heading Section - Bold & Massive */}
         <div className="text-center mb-28" data-aos="fade-up">
@@ -49,7 +49,7 @@ const PartnersSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed font-medium">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60">
             We dont just use technology; we partner with the architects of the digital age to build your future.
           </p>
         </div>
@@ -65,7 +65,7 @@ const PartnersSection = () => {
               {/* Card Container */}
               <div className="
                 relative overflow-hidden
-                h-64 flex flex-col items-center justify-center
+                h-40 flex flex-col items-center justify-center
                 rounded-[2.5rem] border border-white/10
                 bg-white/[0.03] backdrop-blur-3xl
                 transition-all duration-700
@@ -80,7 +80,7 @@ const PartnersSection = () => {
                 </div>
 
                 {/* Partner Name */}
-                <span className={`text-4xl md:text-5xl font-black tracking-tighter text-gray-400 transition-all duration-500 ${partner.color} group-hover:scale-110 mb-2`}>
+                <span className={`text-3xl md:text-2x2 font-black tracking-tighter text-gray-400 transition-all duration-500 ${partner.color} group-hover:scale-110 mb-2`}>
                   {partner.name}
                 </span>
                 

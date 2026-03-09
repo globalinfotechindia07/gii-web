@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+h2{
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ffffff 0%, #5FA8FF 45%, #9B6DFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:768px){
+  h2{
+    font-size: 40px;
+  }
+}
+
+
+
+
+
+
+
+

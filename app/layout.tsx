@@ -8,7 +8,10 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <Header />
+        {/* <div className="mt-20"> */}
+
         {children}
+        {/* </div> */}
         <Footer />
       </body>
     </html>
