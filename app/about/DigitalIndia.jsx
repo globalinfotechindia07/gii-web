@@ -14,63 +14,66 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="bg-[#020617] text-white py-24 px-6 relative overflow-hidden">
-      {/* Decorative Blur */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full" />
+    <section className="bg-[#020617] text-white py-28 px-6 relative overflow-hidden">
       
-      <div className="max-w-5xl mx-auto">
+      {/* Background Glow */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Heading */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+
+          {/* Small Badge */}
+          <div className="inline-block px-4 py-1 mb-5 text-xs tracking-widest uppercase border border-blue-500/30 rounded-full text-blue-400 bg-blue-500/5">
+            About Global Infotech
+          </div>
+
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
             Building a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
               Digital India
             </span>{" "}
             from Nagpur
           </h2>
+
+          <p className="pt-6 mx-auto text-gray-400 text-lg leading-relaxed">
+            Global Infotech India Pvt. Ltd. delivers cutting-edge technology
+            solutions for businesses across India. With a mission to make
+            world-class digital innovation accessible to every enterprise, we
+            have become a trusted partner for 500+ clients — from custom web
+            applications to powerful SaaS ERP platforms.
+          </p>
         </motion.div>
 
-        {/* Content Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="space-y-6 text-gray-400 text-lg leading-relaxed"
-          >
-            <p className="text-white font-medium">
-              Global Infotech India Pvt. Ltd. is a premier IT powerhouse delivering cutting-edge technology to enterprises across India.
-            </p>
-            <p>
-              Founded with a vision to make world-class technology accessible to every business, we've grown into a trusted partner for over 500+ clients.
-            </p>
-            <p>
-              From custom web apps to full-scale SaaS ERP systems, we bring innovation and reliability to every project we undertake.
-            </p>
-          </motion.div>
-
-          {/* Grid of Values */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            {points.map((item, index) => (
-              <div 
-                key={index} 
-                className="bg-white/[0.03] border border-white/10 p-5 rounded-2xl flex items-center gap-3 hover:bg-white/[0.06] transition-colors"
-              >
-                <div className="text-blue-500">{item.icon}</div>
-                <span className="text-sm font-semibold">{item.text}</span>
+        {/* Value Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {points.map((item, index) => (
+            <div
+              key={index}
+              className="group relative p-6 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur hover:border-blue-500/40 hover:bg-blue-500/[0.05] transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <div className="text-blue-400 group-hover:scale-110 transition">
+                  {item.icon}
+                </div>
+                <span className="font-semibold text-white">
+                  {item.text}
+                </span>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </div>
+          ))}
+        </motion.div>
 
       </div>
     </section>

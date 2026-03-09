@@ -45,7 +45,7 @@ export default function OurServices() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#020617] text-white">
+    <section className="pt-40 px-6 bg-[#020617] text-white">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}

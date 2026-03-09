@@ -1,6 +1,6 @@
 import React from "react"
 
-function Portfolio() {
+function Terms() {
   return (
     <div className="bg-[#050816] text-gray-300">
 
@@ -9,20 +9,21 @@ function Portfolio() {
 
         {/* Badge */}
         <div className="border border-blue-500 text-blue-400 text-xs tracking-widest px-5 py-2 rounded-full mb-6">
-          Our Work
+          LEGAL
         </div>
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold">
-          Portfolio{" "}
+          Terms & {" "}
           <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            Global Infotech India
+            Conditions
           </span>
         </h2>
 
         {/* Description */}
-        <p className='text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60 mt-6'>
-          A showcase of projects we've built for clients across India and beyond.
+        <p className="text-gray-400 mt-6 w-100% text-sm md:text-base leading-relaxed">
+        Please read this document carefully before using our services.
+
         </p>
 
       </section>
@@ -30,5 +31,5 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Terms;
 

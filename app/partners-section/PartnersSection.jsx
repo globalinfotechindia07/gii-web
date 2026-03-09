@@ -22,7 +22,7 @@ const PartnersSection = () => {
   }, []);
 
   return (
-    <section className="relative py-40 bg-[#020617] text-white overflow-hidden">
+    <section className="relative py-4 bg-[#020617] text-white overflow-hidden">
       
       {/* Background Dots Grid */}
       <div className="absolute inset-0 z-0 opacity-20" 
@@ -30,7 +30,7 @@ const PartnersSection = () => {
            backgroundSize: '40px 40px' }}>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className=" mx-auto px-2 relative z-10">
 
         {/* Heading Section - Bold & Massive */}
         <div className="text-center mb-28" data-aos="fade-up">
@@ -49,7 +49,7 @@ const PartnersSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-xl md:text-2xl leading-relaxed font-medium">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60">
             We dont just use technology; we partner with the architects of the digital age to build your future.
           </p>
         </div>

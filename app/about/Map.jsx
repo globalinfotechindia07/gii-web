@@ -18,7 +18,7 @@ export default function FindUs() {
         </h2>
 
         {/* subtitle */}
-        <p className="text-gray-400 mb-14">
+        <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60 mb-12">
           Come visit us at our office in Nagpur, Maharashtra.
         </p>
 
