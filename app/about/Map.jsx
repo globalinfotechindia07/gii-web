@@ -1,6 +1,6 @@
 export default function FindUs() {
   return (
-    <section className="py-24 px-6 bg-[#050816] text-center">
+    <section className="py-10 px-5 bg-[#050816] text-center">
 
       <div className="w-[100%] mx-auto">
 

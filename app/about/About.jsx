@@ -18,7 +18,7 @@ function About() {
   const GlassCard = ({ icon, title, text }) => (
     <motion.div
       whileHover={{ y: -6 }}
-      className="bg-white/[0.02] backdrop-blur-xl border border-white/10 p-6 sm:p-8 rounded-3xl hover:bg-white/[0.05] transition-all duration-300"
+      className="bg-white/[0.02] backdrop-blur-xl border border-white/10 p-6 sm:p-8 rounded-3xl hover:bg-white/[0.05] transition-all duration-300 "
     >
       <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-400 mb-5 sm:mb-6">
         {icon}
@@ -35,7 +35,7 @@ function About() {
   );
 
   return (
-    <div className="bg-[#020617] text-gray-300 min-h-screen py-20 sm:py-28 lg:py-32">
+    <div className="bg-[#020617] text-gray-300 min-h-screen py-10 sm:py-10 lg:py-10">
 
       {/* HERO SECTION */}
       <section className="relative px-6 sm:px-10 lg:px-16 mb-16 sm:mb-20 lg:mb-24">
@@ -56,7 +56,7 @@ function About() {
               The Architecture of Growth
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 tracking-tight pt-10">
               About <span className="text-blue-500">Global Infotech</span>
             </h2>
 
@@ -106,14 +106,14 @@ function About() {
 
 
       {/* MISSION STRIP */}
-      <section className="px-6 sm:px-10 lg:px-20 py-20 sm:py-24">
+      <section className="px-6 sm:px-10 lg:px-10 py-10 sm:py-24">
 
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-600 p-6 sm:p-10 rounded-r-2xl"
+          className="bg-gradient-to-r from-blue-900/10 to-transparent border-l-4 border-blue-600 p-6 sm:p-5 rounded-r-2xl"
         >
 
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">

@@ -16,7 +16,6 @@ import {
   Shield,
   Brain,
   TrendingUp,
-  ArrowUpRight,
 } from "lucide-react";
 
 const services = [
@@ -69,11 +68,11 @@ const ServiceCard = ({ service, delay }) => {
     >
       {/* Animated Border Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/5 group-hover:from-blue-500/50 transition-colors duration-500" />
-      
+
       {/* Card Body */}
       <div className="relative h-full bg-[#0f172a]/80 backdrop-blur-2xl p-8 rounded-[calc(1.5rem-1px)] flex flex-col">
-        
-        {/* Glow Effect behind Icon */}
+
+        {/* Glow Effect */}
         <div className={`absolute top-0 left-0 w-32 h-32 bg-gradient-to-br ${service.gradient} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
         <div className="relative z-10">
@@ -85,17 +84,11 @@ const ServiceCard = ({ service, delay }) => {
             {service.title}
           </h3>
 
-          <p className="text-gray-400 text-base leading-relaxed mb-6">
+          <p className="text-gray-400 text-base leading-relaxed">
             {service.description}
           </p>
         </div>
 
-        {/* Action Link */}
-        <div className="mt-auto pt-4 relative z-10">
-          <button className="flex items-center gap-2 text-sm font-bold text-white/50 group-hover:text-blue-400 transition-all">
-            LEARN MORE <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </button>
-        </div>
       </div>
     </div>
   );
@@ -111,22 +104,21 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" className="relative bg-[#020617] text-white py-32 overflow-hidden">
-      
-      {/* Decorative Background Elements */}
+    <section id="services" className="relative bg-[#020617] text-white py-15 overflow-hidden">
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#1e293b,transparent)] pointer-events-none" />
       <div className="absolute top-1/4 -left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* Heading Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+
+        {/* Heading */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-2 gap-6">
           <div className="max-w-2xl" data-aos="fade-right">
-            <h2 className="text-indigo-400 font-mono text-sm tracking-[0.3em] uppercase mb-4">
+            <h2 className="text-indigo-400 font-mono text-sm tracking-[0.3em] uppercase ">
               Our Expertise
             </h2>
             <h2 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-              Future-Ready <br /> Digital Solutions.
+              Future-Ready <br /> Digital Solutions
             </h2>
           </div>
           <div className="max-w-sm" data-aos="fade-left">
@@ -159,11 +151,7 @@ const ServicesSection = () => {
         {/* DESKTOP GRID */}
         <div className="hidden lg:grid grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              service={service}
-              delay={index * 100}
-            />
+            <ServiceCard key={index} service={service} delay={index * 100} />
           ))}
         </div>
 
