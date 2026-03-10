@@ -40,7 +40,7 @@ const ProductsSection = () => {
   return (
     <section
       id="products"
-      className="relative py-32 px-6 bg-[#020617] text-white overflow-hidden"
+      className="relative py-16 px-6 bg-[#020617] text-white overflow-hidden"
     >
       {/* Background Decorative Light */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] -z-10" />
@@ -52,7 +52,7 @@ const ProductsSection = () => {
           className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8"
           data-aos="fade-up"
         >
-          <div className="max-w-2xl">
+          <div >
             <div className="flex items-center gap-2 mb-4">
               <Zap size={20} className="text-blue-500 fill-blue-500" />
               <span className="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase">

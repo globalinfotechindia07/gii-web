@@ -34,7 +34,7 @@ function Value() {
   };
 
   return (
-    <section className="py-24 px-6 bg-[#020617] text-white overflow-hidden">
+    <section className="py-10 px-6 bg-[#020617] text-white overflow-hidden">
 
       <div className="max-w-6xl mx-auto text-center">
 

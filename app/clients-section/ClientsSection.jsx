@@ -30,7 +30,7 @@ const ClientsSection = () => {
   return (
     <section
       id="clients"
-      className="relative py-32 bg-[#020617] text-white overflow-hidden"
+      className="relative py-15 bg-[#020617] text-white overflow-hidden"
     >
 
       {/* Background Glow */}
@@ -48,7 +48,7 @@ const ClientsSection = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
             Powering Industry Leaders
           </h2>
 

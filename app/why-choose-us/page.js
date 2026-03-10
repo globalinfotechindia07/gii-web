@@ -1,10 +1,11 @@
 import React from 'react'
-import WhyChooseUs from './WhyChooseUs'
-
+import WhyChooseUsHeader from './WhyChooseUsHeader'
+import WhyChooseUsCards from './WhyChooseUsCards'
 function page() {
   return (
     <div>
-      <WhyChooseUs/>
+      <WhyChooseUsHeader/>
+      <WhyChooseUsCards />
     </div>
   )
 }

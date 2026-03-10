@@ -14,7 +14,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="bg-[#020617] text-white py-28 px-6 relative overflow-hidden">
+    <section className="bg-[#020617] text-white py-10 px-6 relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full" />
@@ -30,7 +30,7 @@ export default function AboutSection() {
         >
 
           {/* Small Badge */}
-          <div className="inline-block px-4 py-1 mb-5 text-xs tracking-widest uppercase border border-blue-500/30 rounded-full text-blue-400 bg-blue-500/5">
+          <div className="inline-block px-4 mb-1 text-xs tracking-widest uppercase border border-blue-500/30 rounded-full text-blue-400 bg-blue-500/5">
             About Global Infotech
           </div>
 
