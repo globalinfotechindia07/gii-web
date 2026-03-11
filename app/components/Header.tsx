@@ -1,16 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Menu,
-  X,
-  Home,
-  Server,
-  Package,
-  Users,
-  Zap,
-} from "lucide-react";
+import { Menu, X, Home, Server, Package, Users, Zap } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +31,11 @@ const Header = () => {
     <header
       className={`fixed w-full z-50 top-0 left-0 transition-all duration-500
       bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg
-      ${scrolled ? "bg-white/20 backdrop-blur-lg border-white/30" : "bg-white/10 backdrop-blur-md border-white/20"}
-      `}
+      ${
+        scrolled
+          ? "bg-white/20 backdrop-blur-lg border-white/30"
+          : "bg-white/10 backdrop-blur-md border-white/20"
+      }`}
     >
       <nav className="mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div
@@ -52,21 +48,18 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
             className="flex items-center gap-3"
           >
-            <div className="flex items-center rounded-[50%]">
-              <Image
-                src="/images/Global Infotech.jpeg"
-                alt="Global Infotech Logo"
-                width={60}
-                height={60}
-                className="object-contain"
-                priority
-                style={{ borderRadius: "50%" }}
-              />
-            </div>
+            <Image
+              src="/images/Global Infotech.jpeg"
+              alt="Global Infotech Logo"
+              width={60}
+              height={60}
+              className="rounded-full object-contain"
+              priority
+            />
 
             <div className="flex flex-col leading-none">
               <h1 className="text-sm sm:text-lg lg:text-xl font-extrabold tracking-tight">
-                <span className="text-white">GLOBAL</span>
+                <span className="text-white">GLOBAL </span>
                 <span className="text-blue-500">INFOTECH INDIA</span>
               </h1>
 
@@ -115,48 +108,45 @@ const Header = () => {
         </div>
       </nav>
 
-{/* Mobile Menu */}
-<div
-  className={`md:hidden fixed inset-0 z-50
-  bg-slate-950
-  transition-transform duration-500 ease-in-out
-  ${isOpen ? "translate-x-0" : "translate-x-full"}`}
->
-  <div className="flex flex-col gap-4 p-6 pt-28">
-
-    {navLinks.map(({ href, label, icon: Icon }) => (
-      <Link
-        key={href}
-        href={href}
-        onClick={() => {
-          setActiveLink(href);
-          setIsOpen(false);
-        }}
-        className={`flex items-center gap-4 p-5 rounded-xl text-lg font-semibold transition-all duration-300
-        ${
-          activeLink === href
-            ? "bg-blue-600 text-white"
-            : "bg-slate-800 text-gray-200 hover:bg-blue-600 hover:text-white"
-        }`}
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 z-50
+        bg-slate-950
+        transition-transform duration-500 ease-in-out
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <Icon size={22} />
-        {label}
-      </Link>
-    ))}
+        <div className="flex flex-col gap-4 p-6 pt-28">
+          {navLinks.map(({ href, label, icon: Icon }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => {
+                setActiveLink(href);
+                setIsOpen(false);
+              }}
+              className={`flex items-center gap-4 p-5 rounded-xl text-lg font-semibold transition-all duration-300
+              ${
+                activeLink === href
+                  ? "bg-blue-600 text-white"
+                  : "bg-slate-800 text-gray-200 hover:bg-blue-600 hover:text-white"
+              }`}
+            >
+              <Icon size={22} />
+              {label}
+            </Link>
+          ))}
 
-    {/* CTA Button */}
-    <Link
-      href="#contact"
-      className="mt-6 flex items-center justify-center gap-2 p-4 bg-white text-black rounded-xl font-bold hover:bg-gray-200 transition"
-      onClick={() => setIsOpen(false)}
-    >
-      <Zap size={18} />
-      Get Started
-    </Link>
-
-  </div>
-</div>
-
+          {/* CTA Button */}
+          <Link
+            href="#contact"
+            className="mt-6 flex items-center justify-center gap-2 p-4 bg-white text-black rounded-xl font-bold hover:bg-gray-200 transition"
+            onClick={() => setIsOpen(false)}
+          >
+            <Zap size={18} />
+            Get Started
+          </Link>
+        </div>
+      </div>
     </header>
   );
 };
