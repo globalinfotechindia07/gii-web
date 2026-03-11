@@ -5,7 +5,6 @@ import ProductsSection from "./products-section/ProductsSection";
 import ClientsSection from "./clients-section/ClientsSection";
 import PartnersSection from "./partners-section/PartnersSection";
 import ContactSection from "./contact-section/ContactSection";
-import WhyChooseUs from "./why-choose-us/WhyChooseUsHeader";
 import Connect from "./connect/Connect";
 import WhyChooseUsHeader from "./why-choose-us/WhyChooseUsHeader";
 import WhyChooseUsCards from "./why-choose-us/WhyChooseUsCards";
