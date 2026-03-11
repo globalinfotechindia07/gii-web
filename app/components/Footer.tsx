@@ -15,9 +15,10 @@ export default function Footer() {
           {/* Company Info */}
           <div>
 
+        
             {/* Logo */}
             <Image
-              src="/images/Global Infotech.jpeg"
+              src="/images/Global infotech.jpeg"
               alt="Global Infotech India Logo"
               width={100}
               height={100}

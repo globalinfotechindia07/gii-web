@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /out.zip
-/out
+# /out
 /.pnp
 .pnp.*
 .yarn/*
