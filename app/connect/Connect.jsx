@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Mail, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 function Connect() {
   useEffect(() => {
@@ -84,7 +85,7 @@ function Connect() {
           </a>
 
           {/* Explore Services Button */}
-          <a
+          <Link
             href="/services"
             className="
               group
@@ -103,8 +104,11 @@ function Connect() {
             "
           >
             Explore Services
-            <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
+            <ArrowRight
+              size={22}
+              className="group-hover:translate-x-2 transition-transform duration-300"
+            />
+          </Link>
 
         </div>
 
