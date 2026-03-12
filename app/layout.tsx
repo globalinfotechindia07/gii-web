@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "GII Web",
-  keywords: ["GII", "Web", "Next.js", "wenpage"],
+  keywords: ["GII", "Web", "Next.js", "webpage"],
   description: "GII Web is a platform for sharing and discovering web development resources.",
   icons: {
     icon: "/favicon.png",

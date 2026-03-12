@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Homes from "../home/Homes";  
 import { Menu, X, Home, Server, Package, Users, Zap } from "lucide-react";
 
 const Header = () => {
@@ -48,14 +49,15 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
             className="flex items-center gap-3"
           >
-            <Image
-              src="/images/Global Infotech.jpeg"
+            <Homes />
+            {/* <Image
+              src="/images/giilogo.jpeg"
               alt="Global Infotech Logo"
               width={60}
               height={60}
               className="rounded-full object-contain"
               priority
-            />
+            /> */}
 
             <div className="flex flex-col leading-none">
               <h1 className="text-sm sm:text-lg lg:text-xl font-extrabold tracking-tight">

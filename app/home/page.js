@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './Home'
+import Homes from './Homes'
 
 function page() {
   return (
     <div>
-      <Home/>
+      <Homes/>
       
     </div>
   )
