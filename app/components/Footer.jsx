@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Homes from "../home/Homes";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -17,14 +18,15 @@ export default function Footer() {
 
         
             {/* Logo */}
-            <Image
-              src="/images/Global infotech.jpeg"
+            <Homes />
+            {/* <Image
+              src="/images/giilogo.jpeg"
               alt="Global Infotech India Logo"
               width={100}
               height={100}
               className="mb-4 ml-3 rounded-full object-contain"
               priority
-            />
+            /> */}
 
             <h1 className="text-2xl font-bold text-white mb-4 pl-5">
               Global Infotech India
