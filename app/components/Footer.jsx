@@ -84,14 +84,24 @@ export default function Footer() {
               Services
             </h3>
 
-            <ul className="space-y-3 pl-5">
+
+              <ul className="space-y-3 pl-5">
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">Web Development</li>
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">App Development</li>
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">SaaS & ERP Solutions</li>
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">Cybersecurity</li>
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">IT Consulting</li>
+            <li onClick={() => router.push("/services")} className="cursor-pointer hover:text-blue-400">Digital Marketing</li>
+          </ul>
+
+            {/* <ul className="space-y-3 pl-5">
               <li>Web Development</li>
               <li>App Development</li>
               <li>SaaS & ERP Solutions</li>
               <li>Cybersecurity</li>
               <li>IT Consulting</li>
               <li>Digital Marketing</li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Contact */}
@@ -107,7 +117,7 @@ export default function Footer() {
                 target="_blank"
                 className="flex items-start gap-3 hover:text-blue-400"
               >
-                <MapPin className="text-blue-500 mt-1" size={30} />
+                <MapPin className="text-blue-500 mt-1" size={55} />
                 <span>
                   Shantiniketan Society, Pallavi apartments, Plot No 1,
                   Outer Ring Rd, Pratap Nagar, Nagpur, Maharashtra 440022
