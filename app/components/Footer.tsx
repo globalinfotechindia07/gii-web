@@ -1,29 +1,32 @@
 "use client";
-
-import Link from "next/link";
 import Image from "next/image";
+import logo from "@/public/GII.png";
+
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
+
+/* ✅ Logo Constant */
+const LOGO = [{
+  image: "Global Infotech.jpeg",
+  alt: "Global Infotech India Logo",
+}];
 
 export default function Footer() {
   return (
     <footer className="bg-[#020617] text-gray-400 pt-14 pb-8 border-t border-gray-800">
       <div className="container mx-auto px-6">
 
-        {/* Top Section */}
         <div className="grid md:grid-cols-4 gap-10">
 
           {/* Company Info */}
           <div>
 
-        
             {/* Logo */}
             <Image
-              src="/images/Global infotech.jpeg"
-              alt="Global Infotech India Logo"
-              width={100}
-              height={100}
-              className="mb-4 ml-3 rounded-full object-contain"
-              priority
+              src={logo}
+              alt="Global Infotech Logo"
+              width={60}
+              height={60}
+              className="w-[100px] h-[100px] mb-4 ml-3 rounded-full object-contain"
             />
 
             <h1 className="text-2xl font-bold text-white mb-4 pl-5">
@@ -37,10 +40,10 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex gap-4 mt-6 pl-5">
+
               <a
                 href="https://www.facebook.com/globalinfotechindia07?rdid=6wVK3xTB6AClSO4l"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
               >
                 <Facebook size={20} />
@@ -49,7 +52,6 @@ export default function Footer() {
               <a
                 href="https://www.linkedin.com/company/global-infotech-india/"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
               >
                 <Linkedin size={20} />
@@ -58,12 +60,13 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/global_infotech_india"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
               >
                 <Instagram size={20} />
               </a>
+
             </div>
+
           </div>
 
           {/* Quick Links */}
@@ -73,12 +76,12 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3 pl-5">
-              <li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-blue-400 transition">About</Link></li>
-              <li><Link href="/portfolio" className="hover:text-blue-400 transition">Portfolio</Link></li>
-              <li><Link href="/contact-section" className="hover:text-blue-400 transition">Contact</Link></li>
-              <li><Link href="/privacy_policy" className="hover:text-blue-400 transition">Privacy Policy</Link></li>
-              <li><Link href="/terms_and_condition" className="hover:text-blue-400 transition">Terms & Conditions</Link></li>
+              <li><a href="/" className="hover:text-blue-400">Home</a></li>
+              <li><a href="/about" className="hover:text-blue-400">About</a></li>
+              <li><a href="/portfolio" className="hover:text-blue-400">Portfolio</a></li>
+              <li><a href="/contact-section" className="hover:text-blue-400">Contact</a></li>
+              <li><a href="/privacy_policy" className="hover:text-blue-400">Privacy Policy</a></li>
+              <li><a href="/terms_and_condition" className="hover:text-blue-400">Terms & Conditions</a></li>
             </ul>
           </div>
 
@@ -89,12 +92,12 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3 pl-5">
-              <li className="hover:text-blue-400 cursor-pointer">Web Development</li>
-              <li className="hover:text-blue-400 cursor-pointer">App Development</li>
-              <li className="hover:text-blue-400 cursor-pointer">SaaS & ERP Solutions</li>
-              <li className="hover:text-blue-400 cursor-pointer">Cybersecurity</li>
-              <li className="hover:text-blue-400 cursor-pointer">IT Consulting</li>
-              <li className="hover:text-blue-400 cursor-pointer">Digital Marketing</li>
+              <li>Web Development</li>
+              <li>App Development</li>
+              <li>SaaS & ERP Solutions</li>
+              <li>Cybersecurity</li>
+              <li>IT Consulting</li>
+              <li>Digital Marketing</li>
             </ul>
           </div>
 
@@ -109,10 +112,9 @@ export default function Footer() {
               <a
                 href="https://maps.app.goo.gl/cKrAF3hAikWUKgj86"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 hover:text-blue-400 transition"
+                className="flex items-start gap-3 hover:text-blue-400"
               >
-                <MapPin className="text-blue-500 flex-shrink-0 mt-1" size={22} />
+                <MapPin className="text-blue-500 mt-1" size={22} />
                 <span>
                   Shantiniketan Society, Pallavi apartments, Plot No 1,
                   Outer Ring Rd, Pratap Nagar, Nagpur, Maharashtra 440022
@@ -121,18 +123,18 @@ export default function Footer() {
 
               <a
                 href="mailto:info@globalinfotechindia.com"
-                className="flex items-center gap-3 hover:text-blue-400 transition"
+                className="flex items-center gap-3 hover:text-blue-400"
               >
-                <Mail className="text-blue-500 flex-shrink-0" size={20} />
-                <span>info@globalinfotechindia.com</span>
+                <Mail className="text-blue-500" size={20} />
+                info@globalinfotechindia.com
               </a>
 
               <a
                 href="tel:+918788610181"
-                className="flex items-center gap-3 hover:text-blue-400 transition"
+                className="flex items-center gap-3 hover:text-blue-400"
               >
-                <Phone className="text-blue-500 flex-shrink-0" size={20} />
-                <span>+91 8788610181</span>
+                <Phone className="text-blue-500" size={20} />
+                +91 8788610181
               </a>
 
             </div>
@@ -148,13 +150,8 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-6 text-sm">
-            <Link href="/privacy_policy" className="hover:text-blue-400 transition">
-              Privacy Policy
-            </Link>
-
-            <Link href="/terms_and_condition" className="hover:text-blue-400 transition">
-              Terms & Conditions
-            </Link>
+            <a href="/privacy_policy" className="hover:text-blue-400">Privacy Policy</a>
+            <a href="/terms_and_condition" className="hover:text-blue-400">Terms & Conditions</a>
           </div>
 
         </div>
