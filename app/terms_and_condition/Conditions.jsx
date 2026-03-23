@@ -27,9 +27,9 @@ const Conditions = () => {
 
           {/* 1 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               1. Acceptance of Terms
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               By accessing or using the website and services of{" "}
               <span className="text-white font-semibold">
@@ -41,9 +41,9 @@ const Conditions = () => {
 
           {/* 2 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               2. Use of Services
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               You agree to use our services only for lawful purposes and in a
               manner that does not infringe upon the rights of others. You must
@@ -54,9 +54,9 @@ const Conditions = () => {
 
           {/* 3 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               3. Intellectual Property
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               All content, software, logos, trademarks, and materials on this
               website are the exclusive property of{" "}
@@ -69,9 +69,9 @@ const Conditions = () => {
 
           {/* 4 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               4. User Accounts
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               If you create an account on our platform, you are responsible for
               maintaining the confidentiality of your login credentials. You
@@ -81,9 +81,9 @@ const Conditions = () => {
 
           {/* 5 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               5. Third-Party Links
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               Our website may contain links to third-party websites.{" "}
               <span className="text-white font-semibold">
@@ -96,9 +96,9 @@ const Conditions = () => {
 
           {/* 6 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               6. Limitation of Liability
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               To the fullest extent permitted by applicable law,{" "}
               <span className="text-white font-semibold">
@@ -111,9 +111,9 @@ const Conditions = () => {
 
           {/* 7 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               7. Disclaimer of Warranties
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               Our services are provided on an "as is" and "as available" basis
               without warranties of any kind, including merchantability,
@@ -123,9 +123,9 @@ const Conditions = () => {
 
           {/* 8 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               8. Modifications to Terms
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               We reserve the right to update or modify these Terms and
               Conditions at any time without prior notice. Continued use of our
@@ -135,9 +135,9 @@ const Conditions = () => {
 
           {/* 9 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               9. Governing Law & Jurisdiction
-            </h2>
+            </h4>
             <p className="text-gray-400 leading-7">
               These Terms shall be governed by the laws of{" "}
               <span className="text-white font-semibold">India</span>. Any
@@ -151,9 +151,9 @@ const Conditions = () => {
 
           {/* 10 */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-3">
+            <h4 className="text-white text-xl font-bold mb-3">
               10. Contact Us
-            </h2>
+            </h4>
 
             <div className="text-gray-400 space-y-2 leading-7">
               <p className="text-white font-semibold">
