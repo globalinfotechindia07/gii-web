@@ -105,7 +105,7 @@ export default function Footer() {
                 target="_blank"
                 className="flex items-left gap-3 justify-left sm:justify-start hover:text-blue-400"
               >
-                <MapPin className="text-blue-500" size={20} />
+                <MapPin className="text-blue-500" size={30} />
                 <span>
                   Shantiniketan Society, Pratap Nagar, Nagpur, Maharashtra 440022
                 </span>
