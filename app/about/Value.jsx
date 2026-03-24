@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head"; // ✅ ADD THIS
 import React from "react";
 import { motion } from "framer-motion";
 import { Rocket, Handshake, Shield, Maximize, Users, Star } from "lucide-react";
@@ -34,61 +35,71 @@ function Value() {
   };
 
   return (
-    <section className="py-10 px-6 bg-[#020617] text-white overflow-hidden">
+    <>
+      {/* ✅ SEO META KEYWORDS */}
+      <Head>
+        <meta
+          name="keywords"
+          content="global IT company, AI development services, SaaS development company, web development services, mobile app development, custom software development, IT outsourcing company, hire developers, scalable software solutions, enterprise software company"
+        />
+      </Head>
 
-      <div className="max-w-6xl mx-auto text-center">
+      <section className="py-10 px-6 bg-[#020617] text-white overflow-hidden">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="inline-block border border-blue-500/30 bg-blue-500/5 text-blue-400 text-[10px] font-bold tracking-[0.3em] px-6 py-2 rounded-full mb-8 uppercase"
-        >
-          Our Values
-        </motion.div>
+        <div className="max-w-6xl mx-auto text-center">
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-6"
-        >
-          What <span className="text-blue-500">Drives Us</span>
-        </motion.h2>
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="inline-block border border-blue-500/30 bg-blue-500/5 text-blue-400 text-[10px] font-bold tracking-[0.3em] px-6 py-2 rounded-full mb-8 uppercase"
+          >
+            Our Values
+          </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60 mb-16"
-        >
-          Core principles that guide every decision and every line of code we write.
-        </motion.p>
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-6"
+          >
+            What <span className="text-blue-500">Drives Us</span>
+          </motion.h2>
 
-        {/* VALUES GRID */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {values.map((v, i) => (
-            <motion.div key={i} variants={item}>
-              <ValueCard {...v} />
-            </motion.div>
-          ))}
-        </motion.div>
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-20 lg:px-60 mb-16"
+          >
+            Core principles that guide every decision and every line of code we write.
+          </motion.p>
 
-      </div>
+          {/* VALUES GRID */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {values.map((v, i) => (
+              <motion.div key={i} variants={item}>
+                <ValueCard {...v} />
+              </motion.div>
+            ))}
+          </motion.div>
 
-    </section>
+        </div>
+
+      </section>
+    </>
   );
 }
 
@@ -103,10 +114,8 @@ function ValueCard({ icon, title, text }) {
       className="group bg-white/[0.03] border border-white/10 p-8 rounded-3xl text-left hover:bg-white/[0.06] transition-all duration-300 backdrop-blur-md relative overflow-hidden"
     >
 
-      {/* Glow Effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-blue-500/10 to-indigo-500/10 blur-xl" />
 
-      {/* Icon */}
       <motion.div
         animate={{ y: [0, -4, 0] }}
         transition={{ duration: 3, repeat: Infinity }}

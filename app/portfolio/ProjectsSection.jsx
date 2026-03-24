@@ -25,14 +25,14 @@ const projects = [
     link: "/ccrm"
   },
   {
-    image: "/images/Kshitij.jpeg",
+    image: "/images/Kshitij.png",
     tag: "LEGAL",
-    title: "Kshitija Wadaskar",
+    title: "Kshitija Wadatkar",
     text: "A professional website for an advocate showcasing legal services.",
     link: "/kshitijawadatkar"
   },
   {
-    image: "/images/Shubh-Labh Finance.jpeg",
+    image: "/images/Shubh-Labh Finance.png",
     tag: "FINANCE",
     title: "Shubh Labh Finance",
     text: "A banking platform offering information on savings, loans and services.",
@@ -46,7 +46,7 @@ const projects = [
     link: "/sarthingo"
   },
   {
-    image: "/images/Dental Clinic.jpeg",
+    image: "/images/Dental Clinic.png",
     tag: "HEALTHTECH",
     title: "Dental Clinic Software",
     text: "A dental clinic management system for patient records and appointments.",
@@ -60,7 +60,7 @@ const projects = [
     link: "/replete"
   },
     {
-    image: "/images/gram-panchayat.jpg",
+    image: "/images/gram-panchayat.png",
     tag: "E-GOV",
     title: "Gram Panchayat Tigaon",
     text: "An e-Gram Panchayat platform bringing digital governance to rural communities — certificates, schemes, grievances, and local administration online.",

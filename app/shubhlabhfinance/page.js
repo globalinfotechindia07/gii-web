@@ -4,6 +4,7 @@ import WhyChooseUsHeader from '../why-choose-us/WhyChooseUsHeader'
 function page() {
   return (
     <div>
+      <title>Shubh-Labh Finance - GII</title>
       <ShubhLabhFinance/>
       <WhyChooseUsHeader/>
     </div>

@@ -6,6 +6,7 @@ import ExpertTeam from './ExpertTeam'
 function page() {
   return (
     <div>
+      <title>Team - GII</title>
       <MeetTheTeam/>
       <Leadership/>
       <ExpertTeam/>

@@ -43,7 +43,7 @@ const Header = () => {
           className={`flex items-center justify-between transition-all duration-500
           ${scrolled ? "h-16" : "h-20 sm:h-24"}`}
         >
-          {/* ✅ Logo FIXED */}
+          {/* Logo */}
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
@@ -72,7 +72,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* ✅ Desktop Tabs */}
+          {/* Desktop Tabs */}
           <div className="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 p-1 rounded-xl backdrop-blur">
             {navLinks.map(({ href, label, icon: Icon }) => (
               <Link
@@ -92,16 +92,16 @@ const Header = () => {
             ))}
           </div>
 
-          {/* ✅ CTA */}
+          {/* ✅ FIXED CTA */}
           <Link
-            href="/contact"
+            href="/contact-section"
             className="hidden md:flex items-center gap-2 px-5 py-2.5 text-sm font-bold bg-white text-black rounded-xl transition hover:bg-blue-600 hover:text-white"
           >
             <Zap size={16} />
             Get Started
           </Link>
 
-          {/* ✅ Mobile Button */}
+          {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg bg-white/10 border border-white/10 text-white"
@@ -111,7 +111,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* ✅ Mobile Menu */}
+      {/* Mobile Menu */}
       <div
         className={`md:hidden fixed inset-0 z-50
         bg-slate-950
@@ -139,9 +139,9 @@ const Header = () => {
             </Link>
           ))}
 
-          {/* CTA */}
+          {/* ✅ FIXED MOBILE CTA */}
           <Link
-            href="/contact"
+            href="/contact-section"
             className="mt-6 flex items-center justify-center gap-2 p-4 bg-white text-black rounded-xl font-bold hover:bg-gray-200 transition"
             onClick={() => setIsOpen(false)}
           >

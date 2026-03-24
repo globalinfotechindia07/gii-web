@@ -7,9 +7,6 @@ import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react
 import { use } from "react";
 import { useRouter } from "next/navigation";
 
-
-
-
 export default function Footer() {
   const router = useRouter();
   return (

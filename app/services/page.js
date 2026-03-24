@@ -1,17 +1,16 @@
-import React from 'react'
-import Services from './Services'
 import OurServices from './OurServices'
 import Connect from '../connect/Connect'
 
-function page() {
+
+
+function Page() {
   return (
     <div>
-      {/* <Services/> */}
-      <OurServices/>
-      <Connect/>
+      <title>Services - GII</title>
+      <OurServices />
+      <Connect />
     </div>
   )
 }
 
-export default page
-
+export default Page

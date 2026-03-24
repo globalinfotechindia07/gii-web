@@ -4,6 +4,7 @@ import WhyChooseUsHeader from '../why-choose-us/WhyChooseUsHeader'
 function page() {
   return (
     <div>
+      <title>Replete - GII</title>
         <Replete />
         <WhyChooseUsHeader/>
       

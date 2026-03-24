@@ -68,45 +68,49 @@ function WhyChooseUsCards() {
   }, []);
 
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3  px-10">
+    <section className="bg-[#020617] py-16">
 
-      {chooseUsData.map((item, index) => {
-        const Icon = item.icon;
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-10">
 
-        return (
-          <div
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay={index * 150}
-            className="group relative p-px rounded-3xl transition-all duration-500 hover:scale-[1.02]"
-          >
+        {chooseUsData.map((item, index) => {
+          const Icon = item.icon;
 
+          return (
             <div
-              className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
-            />
-
-            <div className="relative h-full bg-[#0f172a]/40 backdrop-blur-2xl border border-white/5 p-8 rounded-[calc(1.5rem-1px)] flex flex-col items-start overflow-hidden">
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+              className="group relative p-px rounded-3xl transition-all duration-500 hover:scale-[1.02]"
+            >
 
               <div
-                className={`p-4 rounded-2xl bg-gradient-to-br ${item.color} shadow-lg shadow-blue-500/10`}
-              >
-                <Icon size={32} className="text-white" />
+                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+              />
+
+              <div className="relative h-full bg-[#0f172a]/40 backdrop-blur-2xl border border-white/5 p-8 rounded-[calc(1.5rem-1px)] flex flex-col items-start overflow-hidden">
+
+                <div
+                  className={`p-4 rounded-2xl bg-gradient-to-br ${item.color} shadow-lg shadow-blue-500/10`}
+                >
+                  <Icon size={32} className="text-white" />
+                </div>
+
+                <h3 className="mt-8 text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-gray-400 leading-relaxed">
+                  {item.description}
+                </p>
+
               </div>
-
-              <h3 className="mt-8 text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 text-gray-400 leading-relaxed">
-                {item.description}
-              </p>
-
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
 
-    </div>
+      </div>
+
+    </section>
   );
 }
 

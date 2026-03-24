@@ -4,6 +4,7 @@ import ContactSection from './ContactSection'
 function page() {
   return (
     <div>
+      <title>Contact - GII</title>
       <ContactSection/>
     </div>
   )

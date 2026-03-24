@@ -8,6 +8,26 @@ import {
   ArrowLeft
 } from "lucide-react";
 
+export const metadata = {
+  title: "CCRMS | Credit Risk Management System for Co-operative Societies",
+  description:
+    "CCRMS is a fintech credit risk management system for co-operative societies and financial institutions. Manage loans, track repayments, ensure compliance, and monitor credit risk in real-time.",
+  keywords: [
+    "CCRMS software",
+    "credit risk management system",
+    "co-operative society software",
+    "fintech software India",
+    "loan management system",
+    "credit risk analysis software",
+    "banking software solutions",
+    "RBI compliant software",
+    "financial management system",
+    "loan tracking software",
+    "cooperative banking software",
+    "risk management fintech platform"
+  ],
+};
+
 export default function CCRMS() {
   const features = [
     {
