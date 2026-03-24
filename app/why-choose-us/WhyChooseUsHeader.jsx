@@ -2,11 +2,11 @@
 
 import React, { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function WhyChooseUsHeader() {
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -40,7 +40,8 @@ function WhyChooseUsHeader() {
           vision.
         </p>
 
-        <a
+        {/* ✅ Fixed Button */}
+        <Link
           href="/contact-section"
           className="inline-flex items-center gap-2 mt-10 px-8 py-3.5 font-semibold text-white transition-all duration-300 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 hover:border-white/20 backdrop-blur-xl shadow-xl group"
         >
@@ -49,7 +50,7 @@ function WhyChooseUsHeader() {
             size={18}
             className="transition-transform group-hover:translate-x-1"
           />
-        </a>
+        </Link>
 
       </div>
     </section>

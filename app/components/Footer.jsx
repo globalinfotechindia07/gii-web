@@ -70,7 +70,7 @@ export default function Footer() {
               <li onClick={() => router.push("/")} className="cursor-pointer hover:text-blue-400">Home</li>
               <li onClick={() => router.push("/about")} className="cursor-pointer hover:text-blue-400">About</li>
               <li onClick={() => router.push("/portfolio")} className="cursor-pointer hover:text-blue-400">Portfolio</li>
-              <li onClick={() => router.push("/contact")} className="cursor-pointer hover:text-blue-400">Contact</li>
+              <li onClick={() => router.push("/contact-section")} className="cursor-pointer hover:text-blue-400">Contact</li>
               <li onClick={() => router.push("/privacy_policy")} className="cursor-pointer hover:text-blue-400">Privacy Policy</li>
               <li onClick={() => router.push("/terms_and_condition")} className="cursor-pointer hover:text-blue-400">Terms & Conditions</li>
             </ul>
