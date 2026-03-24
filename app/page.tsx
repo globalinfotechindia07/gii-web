@@ -12,6 +12,8 @@ import FAQ from "./faq/FAQ";
 function page() {
   return (
     <div>
+      <title>GII Global Infotech India</title>
+
       <HeroSection />
       <ServicesSection />
       <ProductsSection />

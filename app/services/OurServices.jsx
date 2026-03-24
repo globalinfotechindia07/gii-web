@@ -3,6 +3,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Smartphone, Cloud, ShieldCheck, Settings, Megaphone } from "lucide-react";
+export const metadata = {
+  title: "Global Infotech India | Web Development, App Development & SEO Company in India",
+  description:
+    "Global Infotech India offers professional web development, mobile app development, SEO, and digital marketing services. Grow your business with expert IT solutions.",
+  keywords: [
+    "Global Infotech India",
+    "web development company in India",
+    "IT company in Nagpur",
+    "mobile app development services",
+    "SEO company India",
+    "digital marketing agency Nagpur",
+    "software development company",
+    "Next.js development services",
+    "affordable IT services India",
+    "best web design company Nagpur"
+  ],
+};
 
 export default function OurServices() {
   const services = [

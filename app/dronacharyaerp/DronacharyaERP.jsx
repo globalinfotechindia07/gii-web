@@ -82,7 +82,7 @@ export default function DronacharyaERP() {
   target="_blank" 
   rel="noopener noreferrer"
 >
-  <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-3 rounded-lg text-white font-medium hover:opacity-90 transition">
+  <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-3 rounded-lg text-white font-medium hover:opacity-90 transition cursor-pointer">
     <ExternalLink size={18} />
     Visit Website
   </button>
@@ -93,7 +93,7 @@ export default function DronacharyaERP() {
   target="_blank" 
   rel="noopener noreferrer"
 >
-              <button className="flex items-center gap-2 border border-gray-700 px-6 py-3 rounded-lg hover:bg-white/5 transition">
+              <button className="flex items-center gap-2 border border-gray-700 px-6 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
                 <ArrowLeft size={18} />
                 Back to Portfolio
               </button>
@@ -258,4 +258,4 @@ export default function DronacharyaERP() {
 
     </div>
   );
-}
+} 

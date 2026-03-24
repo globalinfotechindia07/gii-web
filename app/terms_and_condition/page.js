@@ -4,6 +4,7 @@ import Conditions from './Conditions'
 function page() {
   return (
     <div>
+      <title>Terms & Conditions - GII</title>
         <Terms/>
         <Conditions/>
       

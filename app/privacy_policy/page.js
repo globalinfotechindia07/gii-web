@@ -4,6 +4,7 @@ import Policy from './Policy'
 function page() {
   return (
     <div>
+      <title>Privacy Policy - GII</title>
         <Privacy/>
         <Policy/>
 

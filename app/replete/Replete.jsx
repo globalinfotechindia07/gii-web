@@ -89,9 +89,18 @@ export default function Replete() {
 
           <div className="flex flex-wrap gap-4 mt-6">
 
-            <button className="flex items-center gap-2 bg-gray-700 px-6 py-3 rounded-lg text-white font-medium cursor-not-allowed opacity-50">
-              Coming Soon
-            </button>
+
+              <a 
+                  href="/portfolio" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <button className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-3 rounded-lg text-white font-medium cursor-pointer hover:opacity-90 transition">
+                    Visit Website
+                  </button>
+              </a>
+
+
 
             <a href="/portfolio">
               <button className="flex items-center gap-2 border border-gray-700 px-6 py-3 rounded-lg hover:bg-white/5 transition cursor-pointer">
