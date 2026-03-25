@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Cloud, ShieldCheck, Settings, Megaphone } from "lucide-react";
+import { Code, Smartphone, Cloud, ShieldCheck, Settings, Megaphone, Cpu, Server } from "lucide-react";
+
 export const metadata = {
   title: "Global Infotech India | Web Development, App Development & SEO Company in India",
   description:
@@ -58,42 +59,97 @@ export default function OurServices() {
       title: "Digital Marketing",
       description: "Data-driven digital marketing strategies across search engines and social media to generate quality leads and grow revenue.",
       features: ["Search Engine Optimization (SEO)", "Google Ads & PPC Campaigns", "Social Media Management", "Content Marketing & Branding", "Analytics & Performance Reports"]
-    }
+    },
+
+    // 🔥 AI/ML Highlighted Card
+    {
+      icon: <Cpu size={24} />,
+      title: "AI & Machine Learning",
+      description: "Advanced AI-powered solutions to automate processes, analyze data, and drive smarter business decisions with intelligent systems.",
+      features: [
+        "Custom AI Model Development",
+        "Machine Learning Integration",
+        "Chatbots & Virtual Assistants",
+        "Predictive Analytics & Forecasting",
+        "Computer Vision & NLP Solutions"
+      ],
+    },
+    {
+  icon: <Server size={24} />,
+  title: "Cloud & DevOps",
+  description: "Reliable cloud infrastructure and DevOps practices to ensure scalable, secure, and high-performance deployment of your applications.",
+  features: [
+    "AWS, Azure & Google Cloud Deployment",
+    "CI/CD Pipeline Setup",
+    "Docker & Kubernetes Containerization",
+    "Server Monitoring & Optimization",
+    "Backup, Scaling & Disaster Recovery"
+  ]
+}
   ];
 
   return (
-    <section className="pt-40 px-6 bg-[#020617] text-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative pt-40 pb-24 px-6 bg-[#020617] text-white overflow-hidden">
+
+      {/* 🔵 Background Glow */}
+      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-600/20 blur-[140px] rounded-full"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block border border-blue-500/30 text-blue-400 text-[10px] font-bold tracking-[0.3em] px-6 py-2 rounded-full mb-6 uppercase">
             WHAT WE DO
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Services</span>
+
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+            Our{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+              Services
+            </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-lg mx-auto">
+
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Comprehensive IT solutions crafted for every business — from startups to large enterprises across India.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((s, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#0b1026] border border-white/10 p-8 rounded-3xl hover:border-blue-500/50 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
+              className={`relative group p-8 rounded-3xl border backdrop-blur-xl transition-all duration-500
+                ${s.highlight 
+                  ? "bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border-blue-500/40 shadow-[0_0_30px_rgba(59,130,246,0.3)]" 
+                  : "bg-[#0b1026] border-white/10 hover:border-blue-500/50"
+                }`}
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-600/10 text-blue-400 rounded-2xl mb-6">
+
+              {/* Glow Hover */}
+              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-xl"></div>
+
+              {/* Icon */}
+              <div className={`relative w-12 h-12 flex items-center justify-center rounded-2xl mb-6 text-blue-400
+                ${s.highlight ? "bg-blue-500/20" : "bg-blue-600/10"}
+              `}>
                 {s.icon}
               </div>
+
+              {/* Title */}
               <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">{s.description}</p>
-              
+
+              {/* Description */}
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                {s.description}
+              </p>
+
+              {/* Features */}
               <ul className="space-y-3">
                 {s.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-sm text-gray-300">
@@ -102,6 +158,14 @@ export default function OurServices() {
                   </li>
                 ))}
               </ul>
+
+              {/* ⭐ Badge */}
+              {s.highlight && (
+                <span className="absolute top-4 right-4 text-[10px] px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                  NEW
+                </span>
+              )}
+
             </motion.div>
           ))}
         </div>
