@@ -8,13 +8,13 @@ import { Handshake } from "lucide-react";
 const ClientsSection = () => {
 
   const clients = [
-    { name: "Global Infotech India Pvt. Ltd.", image: "/images/Global Infotech.jpeg" },
+    { name: "Global Infotech India Pvt. Ltd.", image: "/images/giilogo.jpeg" },
     { name: "Kanu Ventures", image: "/images/kanu-logo.jpeg" },
     { name: "GIBC UK", image: "/images/gibc-logo.png" },
     { name: "Felix-ITS", image: "/images/felix-logo.png" },
     { name: "Sarthi", image: "/images/sarthi-logo.png" },
-    { name: "Shubh-Labh Finance", image: "/images/Shubh-Labh Finance.jpeg" },
-    { name: "Kshitij Wankhade", image: "/images/Kshitij.jpeg" },
+    { name: "Shubh-Labh Finance", image: "/images/Shubh-Labh Finance.png" },
+    { name: "Kshitij Wankhade", image: "/images/Kshitij.png" },
   ];
 
   // useEffect(() => {
