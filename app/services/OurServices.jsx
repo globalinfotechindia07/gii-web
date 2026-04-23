@@ -42,24 +42,24 @@ export default function OurServices() {
       description: "Scalable cloud-based SaaS platforms and ERP systems that digitize and automate your entire business operations.",
       features: ["Custom ERP Development", "School Management Systems", "Multi-Module SaaS Platforms", "Cloud Hosting & Deployment", "Role-Based Access & Dashboards"]
     },
-    {
-      icon: <ShieldCheck size={24} />,
-      title: "Cybersecurity & Networking",
-      description: "Enterprise-grade cybersecurity solutions with penetration testing, audits, and robust defenses to keep your data safe 24/7.",
-      features: ["Penetration Testing & VAPT", "Firewall & Network Setup", "Security Audit & Compliance", "Data Encryption & Protection", "24/7 Security Monitoring"]
-    },
+    // {
+    //   icon: <ShieldCheck size={24} />,
+    //   title: "Cybersecurity & Networking",
+    //   description: "Enterprise-grade cybersecurity solutions with penetration testing, audits, and robust defenses to keep your data safe 24/7.",
+    //   features: ["Penetration Testing & VAPT", "Firewall & Network Setup", "Security Audit & Compliance", "Data Encryption & Protection", "24/7 Security Monitoring"]
+    // },
     {
       icon: <Settings size={24} />,
       title: "IT Consulting & Automation",
       description: "Strategic IT consulting and workflow automation to align your technology infrastructure with your business objectives.",
       features: ["Digital Transformation Strategy", "Workflow & Process Automation", "IT Infrastructure Planning", "Technology Stack Advisory", "Cost Optimization & ROI Planning"]
     },
-    {
-      icon: <Megaphone size={24} />,
-      title: "Digital Marketing",
-      description: "Data-driven digital marketing strategies across search engines and social media to generate quality leads and grow revenue.",
-      features: ["Search Engine Optimization (SEO)", "Google Ads & PPC Campaigns", "Social Media Management", "Content Marketing & Branding", "Analytics & Performance Reports"]
-    },
+    // {
+    //   icon: <Megaphone size={24} />,
+    //   title: "Digital Marketing",
+    //   description: "Data-driven digital marketing strategies across search engines and social media to generate quality leads and grow revenue.",
+    //   features: ["Search Engine Optimization (SEO)", "Google Ads & PPC Campaigns", "Social Media Management", "Content Marketing & Branding", "Analytics & Performance Reports"]
+    // },
 
     // 🔥 AI/ML Highlighted Card
     {
