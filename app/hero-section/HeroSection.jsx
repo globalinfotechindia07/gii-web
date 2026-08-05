@@ -2,21 +2,14 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
-import { ArrowRight, Sparkles, MousePointer2 } from "lucide-react";
 
-const HeroSection = () => {
-  const videoRef = useRef(null);
+export default function HeroSection() {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const btnRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-
-    tl.fromTo(".hero-bg", { scale: 1.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 2 })
-      .from(".hero-pill", { y: 20, opacity: 0, duration: 0.8 }, "-=1.2")
-      .from(".hero-title", { y: 60, opacity: 0, duration: 1, skewY: 7 }, "-=0.6")
-      .from(".hero-desc", { y: 30, opacity: 0, duration: 0.8 }, "-=0.6")
-      .from(".hero-btn", { scale: 0.8, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.4")
-      .to(".mouse-indicator", { y: 10, repeat: -1, yoyo: true, duration: 1 });
-  }, []);
+    const tl = gsap.timeline();
 
   return (
     <section id="home" className="relative min-h-[100vh] flex items-center justify-center pt-20 pb-24 px-6 text-white overflow-hidden bg-black">
@@ -94,6 +87,4 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
