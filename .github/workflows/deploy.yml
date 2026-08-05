@@ -30,8 +30,8 @@ jobs:
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.ftp.globalinfotechindia.com }}
-          username: ${{ secrets.globalinfotechin_giiwebm }} 
-          password: ${{ secrets.CtAREx5$G }}
+          server: ftp.globalinfotechindia.com
+          username: globalinfotechin_giiwebm
+          password: CtAREx5$G
           local-dir: ./out/
           server-dir: /public_html/
