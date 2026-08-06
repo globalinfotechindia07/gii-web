@@ -28,7 +28,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.globalinfotechindia.com
-          username: globalinfotechin_giiwebm
+          username: globalinfotechin_giiweb
           password: CtAREx5$G
           protocol: ftp
           port: 21
