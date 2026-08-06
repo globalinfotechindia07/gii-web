@@ -30,5 +30,7 @@ jobs:
           server: ftp.globalinfotechindia.com
           username: globalinfotechin_giiwebm
           password: CtAREx5$G
+          protocol: ftp
+          port: 21
           local-dir: ./out/
           server-dir: /public_html/
