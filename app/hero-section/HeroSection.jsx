@@ -21,7 +21,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-110"
+          className="absolute inset-0 w-full h-full object-cover scale-110 "
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
@@ -53,7 +53,7 @@ export default function HeroSection() {
         </p>
 
         {/* Buttons with Glassmorphism */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 ">
           <Link
             href="#services"
             className="hero-btn group relative px-10 py-4 rounded-2xl font-bold transition-all duration-500 overflow-hidden"

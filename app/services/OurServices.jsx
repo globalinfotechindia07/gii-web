@@ -89,7 +89,7 @@ export default function OurServices() {
   ];
 
   return (
-    <section className="relative pt-40 pb-24 px-6 bg-[#020617] text-white overflow-hidden">
+    <section className="relative pt-40 pb-24 px-5 bg-[#020617] text-white overflow-hidden">
 
       {/* 🔵 Background Glow */}
       <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-600/20 blur-[140px] rounded-full"></div>
