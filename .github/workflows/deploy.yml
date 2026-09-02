@@ -3,12 +3,11 @@ name: Deploy Next.js to OVIPanel FTP
 on:
   push:
     branches:
-      - Main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -16,10 +15,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Project
         run: npm run build
@@ -28,7 +28,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.globalinfotechindia.com
-          username: globalinfotechin_giiweb
+          username:  globalinfotechin_giiweb
           password: CtAREx5$G
           protocol: ftp
           port: 21
