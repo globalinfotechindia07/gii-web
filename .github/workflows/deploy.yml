@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.globalinfotechindia.com
+          server: globalinfotechindia.com
           username:  globalinfotechin_giiweb
           password: CtAREx5$G
           protocol: ftp
