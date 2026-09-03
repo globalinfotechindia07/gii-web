@@ -3,7 +3,7 @@ name: Deploy Next.js to OVIPanel FTP
 on:
   push:
     branches:
-      - main
+      - ashwin
 
 jobs:
   deploy:
