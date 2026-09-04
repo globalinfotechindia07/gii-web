@@ -20,6 +20,11 @@ pipeline {
                 bat 'npm ci'
             }
         }
+        stage('Lint') {
+    steps {
+        bat 'npm run lint'
+    }
+}
 
         stage('Build') {
             steps {
