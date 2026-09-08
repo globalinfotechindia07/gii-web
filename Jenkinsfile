@@ -24,7 +24,6 @@ pipeline {
         }
         stage('Verify Build Output') {
             steps {
-                // Fail fast if 'out/' wasn't generated (e.g. output: 'export' missing in next.config.js)
                 sh 'test -d out && echo "out/ folder found" || (echo "ERROR: out/ folder missing. Check next.config.js has output: export" && exit 1)'
             }
         }
@@ -48,7 +47,7 @@ pipeline {
                                     makeEmptyDirs: true,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '/home/globalinfotechin/web_globalinfotechindia_com/public_html/gii-web-main',
+                                    remoteDirectory: 'gii-web-main',
                                     remoteDirectorySDF: false,
                                     removePrefix: 'out',
                                     sourceFiles: 'out/**/*'
