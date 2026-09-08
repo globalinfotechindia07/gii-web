@@ -31,30 +31,32 @@ pipeline {
         stage('Deploy to OVIPanel') {
             steps {
                 ftpPublisher(
-                    alwaysPublishFromMaster: true,
+                    alwaysPublishFromMaster: false,
                     continueOnError: false,
                     failOnError: true,
-                    masterNodeName: '',
-                    paramPublish: null,
-                    publishers: [[
-                        configName: 'OVIPanel',
-                        transfers: [[
-                            asciiMode: false,
-                            cleanRemote: false,
-                            excludes: '',
-                            flatten: false,
-                            makeEmptyDirs: true,
-                            noDefaultExcludes: false,
-                            patternSeparator: '[, ]+',
-                            remoteDirectory: '',
-                            remoteDirectorySDF: false,
-                            removePrefix: 'out',
-                            sourceFiles: 'out/**/*'
-                        ]],
-                        usePromotionTimestamp: false,
-                        useWorkspaceInPromotion: false,
-                        verbose: true
-                    ]]
+                    publishers: [
+                        [
+                            configName: 'OVIPanel',
+                            transfers: [
+                                [
+                                    asciiMode: false,
+                                    cleanRemote: false,
+                                    excludes: '',
+                                    flatten: false,
+                                    makeEmptyDirs: true,
+                                    noDefaultExcludes: false,
+                                    patternSeparator: '[, ]+',
+                                    remoteDirectory: '/home/globalinfotechin/web_globalinfotechindia_com/public_html',
+                                    remoteDirectorySDF: false,
+                                    removePrefix: '',
+                                    sourceFiles: '**/*'
+                                ]
+                            ],
+                            usePromotionTimestamp: false,
+                            useWorkspaceInPromotion: false,
+                            verbose: true
+                        ]
+                    ]
                 )
             }
         }
