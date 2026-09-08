@@ -46,7 +46,7 @@ pipeline {
                                     makeEmptyDirs: true,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: '/home/globalinfotechin/web_globalinfotechindia_com/public_html',
+                                    remoteDirectory: '/home/globalinfotechin/web_globalinfotechindia_com/public_html/gii-web-main',
                                     remoteDirectorySDF: false,
                                     removePrefix: '',
                                     sourceFiles: '**/*'
