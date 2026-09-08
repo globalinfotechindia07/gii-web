@@ -87,7 +87,7 @@ export default function HeroSection() {
             Next-Gen
           </span>
           <br />
-          Digital Experiencef
+          Digital Experiencec
         </h1>
 
         {/* Description */}
