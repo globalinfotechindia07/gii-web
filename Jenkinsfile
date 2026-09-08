@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -10,20 +11,20 @@ pipeline {
 
         stage('Node Check') {
             steps {
-                bat 'node --version'
-                bat 'npm --version'
+                sh 'node --version'
+                sh 'npm --version'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm ci'
+                sh 'npm ci'
             }
         }
-       
+
         stage('Build') {
             steps {
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
 
@@ -69,4 +70,3 @@ pipeline {
         }
     }
 }
-
