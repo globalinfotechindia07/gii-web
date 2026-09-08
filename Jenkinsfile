@@ -32,6 +32,8 @@ pipeline {
             steps {
                 ftpPublisher(
                     alwaysPublishFromMaster: false,
+                    masterNodeName: '',
+                    paramPublish: [parameterName: ''],
                     continueOnError: false,
                     failOnError: true,
                     publishers: [
