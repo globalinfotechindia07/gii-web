@@ -1,4 +1,3 @@
-```groovy
 pipeline {
     agent any
 
@@ -7,14 +6,12 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
 
-        stage('Verify Git Commit') {
-            steps {
-                sh 'echo "===== CURRENT COMMIT ====="'
-                sh 'git log -1 --oneline'
-                sh 'git status'
+                sh '''
+                    echo "===== CHECKED OUT COMMIT ====="
+                    git log -1 --oneline
+                    git status
+                '''
             }
         }
 
@@ -39,10 +36,23 @@ pipeline {
 
         stage('Verify Build Output') {
             steps {
-                sh 'echo "===== BUILD OUTPUT ====="'
-                sh 'ls -lah'
-                sh 'ls -lah out'
-                sh 'test -d out'
+                sh '''
+                    echo "===== VERIFYING BUILD ====="
+
+                    if [ ! -d "out" ]; then
+                        echo "ERROR: out/ folder missing!"
+                        echo "Check next.config.js has:"
+                        echo "output: 'export'"
+                        exit 1
+                    fi
+
+                    echo "out/ folder found successfully"
+
+                    echo "===== BUILD FILES ====="
+                    ls -lah out/
+                    echo "===== INDEX CHECK ====="
+                    ls -lah out/index.html
+                '''
             }
         }
 
@@ -59,6 +69,7 @@ pipeline {
                     publishers: [
                         [
                             configName: 'OVIPanel',
+
                             transfers: [
                                 [
                                     asciiMode: false,
@@ -69,14 +80,14 @@ pipeline {
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
 
-                                    // Upload one level above public_html
-                                    remoteDirectory: '/..',
-
+                                    remoteDirectory: 'gii-web-main',
                                     remoteDirectorySDF: false,
+
                                     removePrefix: 'out',
                                     sourceFiles: 'out/**/*'
                                 ]
                             ],
+
                             usePromotionTimestamp: false,
                             useWorkspaceInPromotion: false,
                             verbose: true
@@ -89,13 +100,16 @@ pipeline {
 
     post {
         success {
-            echo 'Build and deployment completed successfully!'
+            echo '======================================'
+            echo 'BUILD + DEPLOYMENT SUCCESSFUL'
+            echo '======================================'
         }
 
         failure {
-            echo 'Build or deployment failed. Check the console output.'
+            echo '======================================'
+            echo 'BUILD OR DEPLOYMENT FAILED'
+            echo 'CHECK JENKINS CONSOLE OUTPUT'
+            echo '======================================'
         }
     }
 }
-```
-
