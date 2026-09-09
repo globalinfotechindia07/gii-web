@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -67,7 +68,10 @@ pipeline {
                                     makeEmptyDirs: true,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
+
+                                    // Upload one level above public_html
                                     remoteDirectory: '/..',
+
                                     remoteDirectorySDF: false,
                                     removePrefix: 'out',
                                     sourceFiles: 'out/**/*'
@@ -93,3 +97,5 @@ pipeline {
         }
     }
 }
+```
+
