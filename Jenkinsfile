@@ -67,7 +67,7 @@ pipeline {
                                     makeEmptyDirs: true,
                                     noDefaultExcludes: false,
                                     patternSeparator: '[, ]+',
-                                    remoteDirectory: 'gii-web-main',
+                                    remoteDirectory: '/..',
                                     remoteDirectorySDF: false,
                                     removePrefix: 'out',
                                     sourceFiles: 'out/**/*'
