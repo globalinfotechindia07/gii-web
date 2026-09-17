@@ -16,17 +16,17 @@ const Leadership = () => {
       image: "/images/Ajinkya.jpeg",
       bio: "Leads GII's business development and marketing strategy, building strong client relationships across sectors."
     },
+    // {
+    //   name: "Dhruv Munghate",
+    //   role: "BUSINESS DEVELOPMENT ASSOCIATE",
+    //   image: "/images/Dhruv.jpeg",
+    //   bio: "Identifies new business opportunities and builds strong client partnerships to drive GII's growth across key markets."
+    // },
     {
-      name: "Dhruv Munghate",
-      role: "BUSINESS DEVELOPMENT ASSOCIATE",
-      image: "/images/Dhruv.jpeg",
-      bio: "Identifies new business opportunities and builds strong client partnerships to drive GII's growth across key markets."
-    },
-    {
-      name: "Kalyani Badhey",
-      role: "MARKETING & SALES HEAD",
-      image: "/images/Kalyani.jpeg",
-      bio: "Drives GII's sales pipeline and client acquisition with a sharp focus on growth and revenue targets."
+      name: "Shivam Deshmukh",
+      role: "CTO",
+      image: "#",
+      bio: "Leading technology and innovation to build scalable solutions, empower teams, and turn bold ideas into impactful digital products."
     }
   ];
 
@@ -49,7 +49,7 @@ const Leadership = () => {
   };
 
   return (
-    <section className="bg-[#0b0f2a] py-24 px-6 text-center overflow-hidden">
+    <section className="bg-[#0b0f2a] py-24 px-6 text-center overflow-hidden center">
 
       {/* Section Title */}
       <motion.div
@@ -72,7 +72,8 @@ const Leadership = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        // className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
       >
         {leaders.map((person, index) => (
           <motion.div

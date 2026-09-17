@@ -6,13 +6,16 @@ import { motion } from "framer-motion";
 const ExpertTeam = () => {
 
   const experts = [
+    { initials: "KB", name: "Kalyani Badhey", role: "MARKETING & SALES HEAD", bio: "Driving growth through smart marketing, strong sales, and lasting customer relationships." },
+    { initials: "DM", name: "Dhruv Munghate", role: "BUSINESS DEVELOPMENT ASSOCIATE", bio: "BIdentifies new business opportunities and builds strong client partnerships to drive GII's growth across key markets." },
     { initials: "DT", name: "Dinesh Tawade", role: "TEAM LEAD", bio: "Leads the development team with expertise in building end-to-end web applications using modern frontend and backend technologies." },
     { initials: "MS", name: "Mansi Sharma", role: "FULL STACK DEVELOPER", bio: "Skilled in React, Node.js and database design, delivering robust and scalable web solutions." },
-    { initials: "RI", name: "Rohan Itenkar", role: "FULL STACK DEVELOPER", bio: "Passionate developer with hands-on experience across the full software development lifecycle." },
+    { initials: "RI", name: "Rohan Itankar", role: "FULL STACK DEVELOPER", bio: "Passionate developer with hands-on experience across the full software development lifecycle." },
     { initials: "JS", name: "Jayesh Sharma", role: "PERFORMANCE MARKETER", bio: "Data-driven marketer specializing in Google Ads, Meta campaigns and ROI-focused digital strategies." },
-    { initials: "RN", name: "Riddhi Nahate", role: "FLUTTER DEVELOPER", bio: "Specializes in building beautiful cross-platform mobile applications using Flutter for iOS and Android." },
-    { initials: "GD", name: "Gayatri Dadore", role: "HR", bio: "Manages talent acquisition, employee relations and company culture to build a thriving team at GII." },
-    { initials: "JK", name: "Jay Karangale", role: "BUSINESS DEVELOPMENT ASSOCIATE", bio: "Identifies new business opportunities and nurtures client relationships to drive GII's growth." }
+    { initials: "AM", name: "Akshay Meshram", role: "UI/UX INTERN", bio: "Designing intuitive experiences, developing interfaces that make an impact." },
+    { initials: "DU", name: "Devanshi Udawant", role: "HR", bio: "Manages talent acquisition, employee relations and company culture to build a thriving team at GII." },
+    { initials: "PG", name: "Parag Giraswale", role: "BACKEND INTERN", bio: "Building reliable backends that power seamless digital experiences." },
+
   ];
 
   const container = {
@@ -65,7 +68,7 @@ const ExpertTeam = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 "
       >
 
         {experts.map((expert, index) => (

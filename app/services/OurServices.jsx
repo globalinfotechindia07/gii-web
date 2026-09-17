@@ -54,12 +54,12 @@ export default function OurServices() {
       description: "Strategic IT consulting and workflow automation to align your technology infrastructure with your business objectives.",
       features: ["Digital Transformation Strategy", "Workflow & Process Automation", "IT Infrastructure Planning", "Technology Stack Advisory", "Cost Optimization & ROI Planning"]
     },
-    // {
-    //   icon: <Megaphone size={24} />,
-    //   title: "Digital Marketing",
-    //   description: "Data-driven digital marketing strategies across search engines and social media to generate quality leads and grow revenue.",
-    //   features: ["Search Engine Optimization (SEO)", "Google Ads & PPC Campaigns", "Social Media Management", "Content Marketing & Branding", "Analytics & Performance Reports"]
-    // },
+    {
+      icon: <Megaphone size={24} />,
+      title: "Digital Marketing",
+      description: "Data-driven digital marketing strategies across search engines and social media to generate quality leads and grow revenue.",
+      features: ["Search Engine Optimization (SEO)", "Google Ads & PPC Campaigns", "Social Media Management", "Content Marketing & Branding", "Analytics & Performance Reports"]
+    },
 
     // 🔥 AI/ML Highlighted Card
     {
@@ -75,27 +75,26 @@ export default function OurServices() {
       ],
     },
     {
-  icon: <Server size={24} />,
-  title: "Cloud & DevOps",
-  description: "Reliable cloud infrastructure and DevOps practices to ensure scalable, secure, and high-performance deployment of your applications.",
-  features: [
-    "AWS, Azure & Google Cloud Deployment",
-    "CI/CD Pipeline Setup",
-    "Docker & Kubernetes Containerization",
-    "Server Monitoring & Optimization",
-    "Backup, Scaling & Disaster Recovery"
-  ]
-}
+      icon: <Server size={24} />,
+      title: "Cloud & DevOps",
+      description: "Reliable cloud infrastructure and DevOps practices to ensure scalable, secure, and high-performance deployment of your applications.",
+      features: [
+        "AWS, Azure & Google Cloud Deployment",
+        "CI/CD Pipeline Setup",
+        "Docker & Kubernetes Containerization",
+        "Server Monitoring & Optimization",
+        "Backup, Scaling & Disaster Recovery"
+      ]
+    }
   ];
 
   return (
     <section className="relative pt-40 pb-24 px-5 bg-[#020617] text-white overflow-hidden">
 
-      {/* 🔵 Background Glow */}
       <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-600/20 blur-[140px] rounded-full"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block border border-blue-500/30 text-blue-400 text-[10px] font-bold tracking-[0.3em] px-6 py-2 rounded-full mb-6 uppercase">
@@ -117,7 +116,7 @@ export default function OurServices() {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((s, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -125,8 +124,8 @@ export default function OurServices() {
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
               className={`relative group p-8 rounded-3xl border backdrop-blur-xl transition-all duration-500
-                ${s.highlight 
-                  ? "bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border-blue-500/40 shadow-[0_0_30px_rgba(59,130,246,0.3)]" 
+                ${s.highlight
+                  ? "bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border-blue-500/40 shadow-[0_0_30px_rgba(59,130,246,0.3)]"
                   : "bg-[#0b1026] border-white/10 hover:border-blue-500/50"
                 }`}
             >

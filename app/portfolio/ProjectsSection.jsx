@@ -59,13 +59,85 @@ const projects = [
     text: "A digital property tax application enabling citizens to view, calculate, and pay property taxes seamlessly.",
     link: "/replete"
   },
-    {
+  {
     image: "/images/gram-panchayat.png",
     tag: "E-GOV",
     title: "Gram Panchayat Tigaon",
     text: "An e-Gram Panchayat platform bringing digital governance to rural communities — certificates, schemes, grievances, and local administration online.",
     link: "/grampanchayat"
-  }
+  },
+  {
+    image: "/images/kanhere.png",
+    tag: "MARKETERS",
+    title: "Kanhere Marketers",
+    text: "Building powerful brands through creative marketing, innovative strategies, and meaningful customer connections.",
+    link: "/kanhere"
+  },
+  {
+    image: "/images/chitragupt.png",
+    tag: "FINTECH",
+    title: "Chitragupt",
+    text: "An innovative platform designed to simplify and enhance financial management for individuals and businesses.",
+    link: "/chitragupt"
+  },
+  {
+    image: "/images/ticket-app.png",
+    tag: "APP",
+    title: "Ticket Booking App",
+    text: "A seamless ticket booking system that streamlines event access and attendee management.",
+    link: "/ticket-app"
+  },
+  {
+    image: "/images/jp-insure.png",
+    tag: "CRM",
+    title: "JP Insurance CRM",
+    text: "A comprehensive insurance CRM system designed to streamline client management, policy tracking, and business workflows.",
+    link: "/jp-crm"
+  },
+  {
+    image: "/images/housesoption.png",
+    tag: "HOUSESOPTION",
+    title: "Houses Option",
+    text: "Houses Option is a premier property platform in Nagpur, offering a seamless and intuitive interface for house rentals, property searches, and real estate transactions.",
+    link: "/housesoption"
+  },
+
+  {
+    image: "/images/Pinak.png",
+    tag: "APP",
+    title: "Pinak",
+    text: "Pinak is a financial management platform designed to simplify and enhance financial management for individuals and businesses.",
+    link: "/pinak"
+  },
+  {
+    image: "/images/mytransfer.png",
+    tag: "DIGITAL MARKETING",
+    title: "My Transfer Istanbul",
+    text: "My Transfer Istanbul is a transfer company that offers airport transfer services to and from Istanbul Airport. We provide safe, reliable, and comfortable transportation for our customers.",
+    link: "/istanbul"
+  },
+  {
+    image: "/images/renewlight.png",
+    tag: "DIGITAL MARKETING",
+    title: "Renew Light Energy",
+    text: "Renew Light Energy is a renewable energy company that offers solar energy solutions to residential and commercial customers.",
+    link: "/renewlight"
+  },
+  {
+    image: "/images/nineplast.png",
+    tag: "DIGITAL MARKETING",
+    title: "Nineplast",
+    text: "Nineplast is a plastics and industrial-focused brand operating within the manufacturing and supply sector, serving customers looking for reliable plastic products and industrial solutions.",
+    link: "/nineplast"
+  },
+    {
+    image: "/images/astrology.png",
+    tag: "DIGITAL MARKETING",
+    title: "Astrology Starts",
+    text: "Astrology Starts is a astrology-focused brand operating within the astrology and horoscope sector, serving customers looking for reliable astrology services and horoscope solutions.",
+    link: "/astrology"
+  },
+
 ];
 
 const ValueCard = ({ image, tag, title, text, link }) => {

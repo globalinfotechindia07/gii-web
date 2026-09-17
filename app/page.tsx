@@ -9,10 +9,13 @@ import Connect from "./connect/Connect";
 import WhyChooseUsHeader from "./why-choose-us/WhyChooseUsHeader";
 import WhyChooseUsCards from "./why-choose-us/WhyChooseUsCards";
 import FAQ from "./faq/FAQ";
+export const metadata = {
+  title: "GII Global Infotech India",
+};
+
 function page() {
   return (
     <div>
-      <title>GII Global Infotech India</title>
 
       <HeroSection />
       <ServicesSection />

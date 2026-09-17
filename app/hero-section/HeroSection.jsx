@@ -2,14 +2,54 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const btnRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef(null);
+  const textRef = useRef(null);
+  const btnRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
+    
+    tl.fromTo(".hero-bg", 
+        { scale: 1.1, opacity: 0 }, 
+        { scale: 1, opacity: 1, duration: 1.5, ease: "power3.out" }
+      )
+      .fromTo(".hero-pill", 
+        { y: -20, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 
+        "-=1"
+      )
+      .fromTo(".hero-title", 
+        { y: 30, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 
+        "-=0.5"
+      )
+      .fromTo(".hero-desc", 
+        { y: 20, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 
+        "-=0.5"
+      )
+      .fromTo(".hero-btn", 
+        { y: 20, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 0.6, stagger: 0.2, ease: "power2.out" }, 
+        "-=0.4"
+      )
+      .fromTo(".mouse-indicator", 
+        { y: -10, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 
+        "-=0.2"
+      );
+
+    gsap.to(".mouse-indicator div", {
+      y: 6,
+      duration: 0.6,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+  }, []);
 
   return (
     <section id="home" className="relative min-h-[100vh] flex items-center justify-center pt-20 pb-24 px-6 text-white overflow-hidden bg-black">
